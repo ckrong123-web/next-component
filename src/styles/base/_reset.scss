@@ -1,0 +1,123 @@
+* {
+    margin: 0;
+    padding: 0;
+    font: inherit;
+    color: inherit;
+}
+
+*,
+:after,
+:before {
+    box-sizing: border-box;
+}
+
+:root {
+    -webkit-tap-highlight-color: transparent;
+    -webkit-text-size-adjust: 100%;
+    text-size-adjust: 100%;
+    cursor: default;
+    overflow-wrap: break-word;
+    -moz-tab-size: 4;
+    tab-size: 4;
+}
+
+html,
+body {
+    height: 100%;
+}
+
+img,
+picture,
+video,
+canvas,
+svg {
+    display: block;
+    // max-width: 100%;
+}
+
+button {
+    background: none;
+    border: 0;
+    cursor: pointer;
+}
+
+a {
+    text-decoration: none;
+}
+
+table {
+    border-collapse: collapse;
+    border-spacing: 0;
+}
+
+//base setting
+html {
+    font-size: var.$root-font-size;
+    @include mix.respond-to(var.$screen-sm) {
+        font-size: var.$root-font-size-minimum;
+    }
+}
+
+body {
+    font-size: 1.4rem;
+    font-family:
+        var.$font-noto, var.$font-roboto, 'malgun', 'Apple SD Gothic Neo',
+        '돋움', Dotum;
+    font-weight: var.$font-weight-regular;
+    line-height: 1;
+    letter-spacing: -0.05em;
+    background: var.$color-white;
+    color: #212529;
+}
+
+li {
+    list-style: none;
+}
+
+[hidden] {
+    display: none;
+}
+
+hr {
+    padding: 0.1em 0;
+    margin: 5em 0;
+    border: 2px dashed #fff;
+    background-color: pink;
+}
+
+input,
+textarea {
+    appearance: none; /* 브라우저의 기본 스타일을 제거합니다. */
+    border: none; /* 테두리를 제거합니다. */
+    outline: none; /* 외곽선을 제거합니다. */
+    background-color: transparent; /* 배경색을 투명하게 설정합니다. */
+    margin: 0; /* 마진을 제거합니다. */
+    padding: 0; /* 안쪽 여백을 제거합니다. */
+    font-family: inherit; /* 폰트 패밀리를 상위 요소로부터 상속받습니다. */
+    font-size: inherit; /* 폰트 크기를 상위 요소로부터 상속받습니다. */
+    line-height: inherit; /* 줄 높이를 상위 요소로부터 상속받습니다. */
+    vertical-align: middle; /* 수직 정렬을 가운데로 설정합니다. */
+    box-sizing: border-box; /* 상자 모델을 변경하여 패딩과 테두리를 요소의 크기에 포함시킵니다. */
+    /* 추가적인 스타일을 필요에 따라 적용합니다. */
+}
+input:-webkit-autofill,
+input:-webkit-autofill:hover,
+input:-webkit-autofill:focus,
+input:-webkit-autofill:active {
+    -webkit-text-fill-color: #000;
+    -webkit-box-shadow: 0 0 0px 1000px #fff inset;
+    box-shadow: 0 0 0px 1000px #fff inset;
+    transition: background-color 5000s ease-in-out 0s;
+}
+
+textarea {
+    resize: none; /* textarea의 크기 조절 기능을 비활성화합니다. */
+}
+.is-arror input,
+.is-arror textarea {
+    caret-color: var.$color-fail;
+}
+
+.wrap {
+    position: relative;
+}

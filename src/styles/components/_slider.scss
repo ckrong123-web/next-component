@@ -1,0 +1,63 @@
+.slider {
+    padding: 0 0.5rem;
+
+    .rc-slider {
+        height: auto;
+        padding: 1rem 0;
+    }
+
+    .rc-slider-rail {
+        background-color: $gray-color-2;
+        top: 0.8rem;
+    }
+
+    .rc-slider-track {
+        background-color: $blue-color-5;
+        top: 0.8rem;
+    }
+
+    .rc-slider-step {
+        top: 0.8rem;
+    }
+
+    .rc-slider-handle {
+        opacity: 1;
+        border: 0.3rem solid $blue-color-5;
+        top: 0.3rem;
+        margin-top: 0;
+        &:hover {
+            border-color: $blue-color-5;
+        }
+    }
+
+    .rc-slider-handle.rc-slider-handle-dragging:active,
+    .rc-slider-handle.rc-slider-handle-dragging,
+    .rc-slider-handle:active {
+        border: 0.3rem solid $blue-color-5 !important;
+        box-shadow: 0 0 0.2rem 0.4rem rgba(0, 0, 0, 0.08) !important;
+    }
+    .rc-slider-dot {
+        width: 1rem;
+        height: 1rem;
+        bottom: auto;
+        top: calc(50% - 0.5rem);
+        border: 0.2rem solid $gray-color-2;
+        color: $gray-color-3;
+        &-active {
+            background-color: $blue-color-5;
+            border-color: $blue-color-5;
+            color: $gray-color-4;
+        }
+    }
+
+    .rc-slider-mark {
+        position: relative;
+        top: 0;
+        height: 0.6rem;
+        margin-top: 1rem;
+    }
+
+    &-tooltip.rc-tooltip {
+        padding: 0.5rem 0;
+    }
+}

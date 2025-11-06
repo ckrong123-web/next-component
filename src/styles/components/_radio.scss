@@ -1,0 +1,35 @@
+.radioGroup {
+    display: flex;
+    align-items: center;
+    gap: 0.8rem;
+}
+
+.radio {
+    display: inline-block;
+    &__wrap {
+        display: inline-flex;
+        align-items: center;
+        gap: 0.4rem;
+    }
+    &__input {
+        width: 1.6rem;
+        height: 1.6rem;
+        border-radius: 50%;
+        box-sizing: border-box;
+        border: 1px solid $gray-color-3;
+        background-color: $white-color-1;
+
+        &:checked {
+            border: 0.4rem solid $blue-point-1;
+        }
+
+        &:disabled {
+            background-color: $gray-color-2;
+        }
+    }
+    &__txt {
+        font-weight: 400;
+        font-size: 1.4rem;
+        line-height: 2rem;
+    }
+}

@@ -1,0 +1,115 @@
+// 아이콘 컴포넌트
+.icon {
+    display: inline-block;
+    width: 100%;
+    height: 100%;
+    &__wrap {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        width: 100%;
+        height: 100%;
+
+        > i {
+            display: inline-block;
+            width: 100%;
+            height: 100%;
+            background-size: cover;
+            background-position: center;
+        }
+    }
+}
+
+// 아이콘 백그라운드
+.ico {
+    &-add {
+        background: ico-add();
+    }
+    &-arrowDown {
+        background: ico-arrowDown();
+    }
+    &-arrowDown--333 {
+        background: ico-arrowDown('333');
+    }
+    &-arrowDown--main {
+        background: ico-arrowDown('0260EB');
+    }
+    &-arrowUp {
+        background: ico-arrowUp();
+    }
+    &-arrowUp--333 {
+        background: ico-arrowUp('333');
+    }
+    &-arrowUp--main {
+        background: ico-arrowUp('0260EB');
+    }
+    &-close {
+        background: ico-close();
+    }
+    &-close--333 {
+        background: ico-close('333');
+    }
+    &-copy {
+        background: ico-copy();
+    }
+    &-delete {
+        background: ico-delete();
+    }
+    &-delete--333 {
+        background: ico-delete('333');
+    }
+    &-earth {
+        background: ico-earth();
+    }
+    &-exelDown {
+        background: ico-exelDown();
+    }
+    &-link {
+        background: ico-link();
+    }
+    &-link--333 {
+        background: ico-link('333');
+    }
+    &-link--666 {
+        background: ico-link('666');
+    }
+    &-link--999 {
+        background: ico-link('999');
+    }
+    &-minus {
+        background: ico-minus();
+    }
+    &-plus {
+        background: ico-plus();
+    }
+    &-plus--333 {
+        background: ico-plus('333');
+    }
+    &-print {
+        background: ico-print();
+    }
+    &-reset {
+        background: ico-reset();
+    }
+    &-reset--333 {
+        background: ico-reset('333');
+    }
+    &-save {
+        background: ico-save();
+    }
+    &-tableMinus {
+        background: ico-tableMinus();
+    }
+    &-tableMinus--333 {
+        background: ico-tableMinus('333');
+    }
+    &-upload {
+        background: ico-upload();
+    }
+    &-upload--666 {
+        background: ico-upload('666');
+    }
+    &-upload--0260EB {
+        background: ico-upload('0260EB');
+    }
+}

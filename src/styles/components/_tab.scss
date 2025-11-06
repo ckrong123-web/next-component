@@ -1,0 +1,103 @@
+.tab {
+    &__btnList {
+        display: flex;
+        justify-content: flex-start;
+        align-items: center;
+        gap: 0.6rem;
+    }
+    &__btn {
+        padding: 0.7rem 2.4rem;
+        border-radius: 0.8rem 0.8rem 0 0;
+        overflow: hidden;
+        background-color: $blue-color-4;
+        color: $blue-color-5;
+        position: relative;
+
+        &.on {
+            background-color: $white-color-1;
+            color: $blue-point-1;
+
+            &::after {
+                content: '';
+                display: block;
+                position: absolute;
+                width: 2px;
+                height: 1.9rem;
+                left: 0;
+                top: calc(50% - 0.95rem);
+                background-color: $blue-point-1;
+            }
+        }
+    }
+    &__btnTxt {
+        font-weight: 700;
+        font-size: 1.6rem;
+        line-height: 2.4rem;
+    }
+    &__contArea {
+        width: 100%;
+        padding: 1.4rem 2.4rem;
+        border-radius: 0 0.8rem 0.8rem 0.8rem;
+        overflow: hidden;
+        background-color: $white-color-1;
+    }
+    &__cont {
+        display: none;
+
+        &.on {
+            display: block;
+        }
+    }
+
+    &--round {
+        .tab__btnArea {
+            margin-bottom: 1rem;
+        }
+        .tab__btnList {
+            border: 1px solid $gray-color-2;
+            background-color: $white-color-1;
+            border-radius: 4rem;
+            gap: 1px;
+            width: fit-content;
+            overflow: hidden;
+        }
+        .tab__btn {
+            padding: 1rem 3rem;
+            position: relative;
+            border-radius: 4rem;
+            background-color: $white-color-1;
+            overflow: visible;
+            box-sizing: border-box;
+            &::after {
+                content: '';
+                display: inline-block;
+                width: 1px;
+                height: 20px;
+                background-color: $gray-color-3;
+                position: absolute;
+                top: calc(50% - 1rem);
+                right: 0;
+                z-index: 2;
+            }
+            &.on {
+                padding: 0.8rem 2.8rem;
+                border: 2px solid $blue-point-1;
+                background-color: #fafcff;
+                &::after {
+                    display: none;
+                }
+            }
+            &.prev::after {
+                display: none;
+            }
+        }
+        .tab__btnItem:last-of-type {
+            .tab__btn::after {
+                display: none;
+            }
+        }
+        .tab__contArea {
+            border-radius: 0.8rem;
+        }
+    }
+}

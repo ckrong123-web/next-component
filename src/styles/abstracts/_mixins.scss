@@ -1,0 +1,116 @@
+@use 'abstracts/functions' as func;
+@use 'abstracts/variables' as var;
+$icon-path: '../img/icons/';
+
+// 아이콘 스타일 Mixin
+@mixin icon($icon, $size: 24px, $color: #000) {
+    width: $size;
+    height: $size;
+    fill: $color;
+    background-image: url('#{$icon-path}#{$icon}');
+    background-size: contain;
+    background-repeat: no-repeat;
+}
+
+@mixin a11y-hidden() {
+    overflow: hidden;
+    position: absolute;
+    clip: rect(0, 0, 0, 0);
+    clip-path: circle(0);
+    width: 1px;
+    height: 1px;
+    margin: -1px;
+    border: 0;
+    padding: 0;
+    white-space: nowrap;
+}
+
+@mixin background(
+    $name,
+    $repeat: no-repeat,
+    $x: center,
+    $y: top,
+    $color: null
+) {
+    background: $color url($name) $repeat $x $y;
+}
+
+@mixin ellipsis($line: 1) {
+    overflow: hidden;
+    text-overflow: ellipsis;
+
+    @if ($line==1) {
+        white-space: nowrap;
+    } @else {
+        display: -webkit-box;
+        -webkit-box-orient: vertical;
+        -webkit-line-clamp: $line;
+    }
+}
+
+@mixin scrollbars(
+    $size,
+    $foreground-color,
+    $background-color: mix($foreground-color, white, 50%)
+) {
+    // For Google Chrome
+    &::-webkit-scrollbar {
+        width: $size;
+        height: $size;
+    }
+
+    &::-webkit-scrollbar-thumb {
+        background: $foreground-color;
+        border-radius: 10px;
+        background-clip: padding-box;
+        border: 1px solid transparent;
+    }
+
+    &::-webkit-scrollbar-track {
+        background: $background-color;
+        // box-shadow: inset 0px 0px 5px white;
+        border-radius: 10px;
+    }
+}
+@mixin pseudo-element() {
+    content: '';
+    display: block;
+}
+
+@mixin respond-to($size) {
+    @media (max-width: $size) {
+        @content;
+    }
+}
+
+/* NotoSans */
+@mixin noto--m-12() {
+    font-family: var.$font-noto;
+    font-weight: 500;
+    font-size: 1.2rem;
+    line-height: 1.775rem;
+}
+@mixin noto--m-10() {
+    font-family: var.$font-noto;
+    font-weight: 500;
+    font-size: 1rem;
+}
+@mixin noto--r-14() {
+    font-family: var.$font-noto;
+    font-weight: 400;
+    font-size: 1.4rem;
+    line-height: 2rem;
+}
+
+// label
+// @mixin font-spoqa--label() {
+//     font-family: var.$font-spoqa;
+//     font-size: 1.2rem;
+//     line-height: 2rem;
+// }
+// // badge
+// @mixin font-spoqa--badge() {
+//     font-family: var.$font-spoqa;
+//     font-size: 1.1rem;
+//     line-height: 1.6rem;
+// }

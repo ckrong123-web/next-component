@@ -1,0 +1,89 @@
+/* fonts */
+//NotoSans
+
+//regular
+@font-face {
+    font-family: 'NotoSansKR';
+    font-style: normal;
+    font-weight: 400;
+    src:
+        local(''),
+        url('/font/noto-sans-kr-v13-latin_korean-regular.woff2') format('woff2'),
+        /* Super Modern Browsers */
+            url('/font/noto-sans-kr-v13-latin_korean-regular.woff')
+            format('woff'),
+        /* Modern Browsers */
+            url('/font/noto-sans-kr-v13-latin_korean-regular.ttf')
+            format('truetype'),
+        /* Safari, Android, iOS */
+            url('/font/noto-sans-kr-v13-latin_korean-regular.svg#NotoSansKR')
+            format('svg');
+    /* Legacy iOS */
+}
+
+//medium
+@font-face {
+    font-family: 'NotoSansKR';
+    font-style: normal;
+    font-weight: 500;
+    src:
+        local(''),
+        url('/font/noto-sans-kr-v13-latin_korean-500.woff2') format('woff2'),
+        /* Super Modern Browsers */
+            url('/font/noto-sans-kr-v13-latin_korean-500.woff') format('woff'),
+        /* Modern Browsers */ url('/font/noto-sans-kr-v13-latin_korean-500.ttf')
+            format('truetype'),
+        /* Safari, Android, iOS */
+            url('/font/noto-sans-kr-v13-latin_korean-500.svg#NotoSansKR')
+            format('svg');
+    /* Legacy iOS */
+}
+
+//bold
+@font-face {
+    font-family: 'NotoSansKR';
+    font-style: normal;
+    font-weight: 700;
+    src:
+        local(''),
+        url('/font/noto-sans-kr-v13-latin_korean-700.woff2') format('woff2'),
+        /* Super Modern Browsers */
+            url('/font/noto-sans-kr-v13-latin_korean-700.woff') format('woff'),
+        /* Modern Browsers */ url('/font/noto-sans-kr-v13-latin_korean-700.ttf')
+            format('truetype'),
+        /* Safari, Android, iOS */
+            url('/font/noto-sans-kr-v13-latin_korean-700.svg#NotoSansKR')
+            format('svg');
+    /* Legacy iOS */
+}
+
+//Roboto
+@font-face {
+    font-family: 'Roboto';
+    src:
+        url('/font/Roboto-Regular-webfont.woff') format('woff'),
+        url('/font/Roboto-Regular-webfont.ttf') format('truetype'),
+        url('/font/Roboto-Regular-webfont.svg#robotoregular') format('svg');
+    font-weight: 400;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Roboto';
+    src:
+        url('/font/Roboto-Medium-webfont.woff') format('woff'),
+        url('/font/Roboto-Medium-webfont.ttf') format('truetype'),
+        url('/font/Roboto-Medium-webfont.svg#robotoregular') format('svg');
+    font-weight: 500;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Roboto';
+    src:
+        url('/font/Roboto-Bold-webfont.woff') format('woff'),
+        url('/font/Roboto-Bold-webfont.ttf') format('truetype'),
+        url('/font/Roboto-Bold-webfont.svg#robotoregular') format('svg');
+    font-weight: 700;
+    font-style: normal;
+}

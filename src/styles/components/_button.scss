@@ -1,0 +1,110 @@
+.btn {
+    &:disabled {
+        pointer-events: none;
+        .btn__wrap {
+            background-color: $gray-color-2;
+        }
+    }
+
+    &__wrap {
+        display: flex;
+        height: 2.8rem;
+        gap: 0.2rem;
+        justify-content: center;
+        align-items: center;
+        border-radius: 0.4rem;
+        box-sizing: border-box;
+        @include mix.noto--m-12;
+        word-break: keep-all;
+        padding: 0 1.2rem;
+        transition: 0.2s ease background-color;
+        border: 1px solid $gray-color-3;
+        color: $gray-color-6;
+
+        &:hover {
+            background-color: $blue-color-1;
+        }
+
+        > .icon {
+            width: 2rem;
+            height: 2rem;
+        }
+    }
+    &--blue {
+        background-color: $blue-color-3;
+        color: $white-color-1;
+        border: none;
+
+        &:hover {
+            background-color: $blue-color-2;
+        }
+    }
+    &--gray {
+        color: $gray-color-4;
+    }
+    &--darkGray {
+        color: $gray-color-5;
+    }
+}
+
+.btnAcco {
+    &__wrap {
+        width: 2.8rem;
+        height: 2.8rem;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        background-color: $blue-color-3;
+        border-radius: 0.4rem;
+        transition: 0.2s ease background-color;
+        &:hover {
+            background-color: $blue-color-2;
+        }
+    }
+    &__icon {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        width: 2rem;
+        height: 2rem;
+    }
+}
+
+.btnIco {
+    &__wrap {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        width: 2.8rem;
+        height: 2.8rem;
+        border-radius: 0.4rem;
+        position: relative;
+        background-color: $blue-color-3;
+        transition: 0.2s ease background-color;
+
+        &:hover {
+            background-color: $blue-color-2;
+        }
+    }
+    &__icon {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        width: 2rem;
+        height: 2rem;
+    }
+    &__tooltip {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        position: absolute;
+        top: -0.5rem;
+        left: 50%;
+        transform: translateX(-50%);
+
+        &.tooltipBottom {
+            top: auto;
+            bottom: -0.5rem;
+        }
+    }
+}
