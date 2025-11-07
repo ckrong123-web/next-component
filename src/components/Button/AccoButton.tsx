@@ -20,7 +20,7 @@ export default function AccoButton({ isOpen, onClickEvt }: AccoButtonProps) {
                     <Icon
                         icoName={isToggleOpen ? 'ico-arrowUp' : 'ico-arrowDown'}
                         blindTxt={isToggleOpen ? '닫기' : '열기'}
-                    ></Icon>
+                    />
                 </span>
             </div>
         </button>

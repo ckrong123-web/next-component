@@ -8,3 +8,5 @@ export { RadioGuide } from '@/guide/Radio';
 export { SliderGuide } from '@/guide/Slider';
 export { SelectBoxGuide } from '@/guide/SelectBox';
 export { SwiperGuide } from '@/guide/Swiper';
+export { StepperGuide } from '@/guide/Stepper';
+export { ProgressGuide } from '@/guide/Progress';

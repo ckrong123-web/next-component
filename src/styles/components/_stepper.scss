@@ -1,0 +1,62 @@
+.stepper {
+    &__wrap {
+        display: flex;
+        align-items: center;
+        border: 1px solid $gray-color-3;
+        border-radius: 0.4rem;
+        transition: 0.15s ease;
+
+        &--focus {
+            border-color: $blue-point-1;
+        }
+
+        &--disable {
+            background-color: $blue-color-1;
+        }
+    }
+    &__input {
+        flex-basis: 100%;
+        border-color: inherit;
+        position: relative;
+    }
+}
+
+.stepper-btn {
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+    width: 2.8rem;
+    height: 2.8rem;
+
+    &__icon {
+        width: 1.6rem;
+        height: 1.6rem;
+    }
+
+    &:disabled {
+        pointer-events: none;
+        .stepper-btn__icon {
+            opacity: 0.4;
+        }
+    }
+}
+.stepper-input {
+    .input__wrap {
+        border: none;
+        padding-top: 0.25rem;
+        padding-bottom: 0.35rem;
+    }
+    &::-webkit-outer-spin-button {
+        -webkit-appearance: none;
+        margin: 0;
+    }
+
+    &::-webkit-inner-spin-button {
+        -webkit-appearance: none;
+        margin: 0;
+    }
+
+    &::placeholder {
+        color: #8c959f;
+    }
+}

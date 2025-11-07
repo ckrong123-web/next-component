@@ -32,7 +32,7 @@ export default function IconButton({
         >
             <div className={cn('btnIco__wrap')}>
                 <span className="btnIco__icon">
-                    <Icon icoName={icoName}></Icon>
+                    <Icon icoName={icoName} />
                 </span>
                 {tooltip && (
                     <div

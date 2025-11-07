@@ -84,33 +84,20 @@ $icon-path: '../img/icons/';
 }
 
 /* NotoSans */
-@mixin noto--m-12() {
+@mixin noto--12($weight: 500) {
     font-family: var.$font-noto;
-    font-weight: 500;
+    font-weight: $weight;
     font-size: 1.2rem;
     line-height: 1.775rem;
 }
-@mixin noto--m-10() {
+@mixin noto--10($weight: 500) {
     font-family: var.$font-noto;
-    font-weight: 500;
+    font-weight: $weight;
     font-size: 1rem;
 }
-@mixin noto--r-14() {
+@mixin noto--14($weight: 400) {
     font-family: var.$font-noto;
-    font-weight: 400;
+    font-weight: $weight;
     font-size: 1.4rem;
     line-height: 2rem;
 }
-
-// label
-// @mixin font-spoqa--label() {
-//     font-family: var.$font-spoqa;
-//     font-size: 1.2rem;
-//     line-height: 2rem;
-// }
-// // badge
-// @mixin font-spoqa--badge() {
-//     font-family: var.$font-spoqa;
-//     font-size: 1.1rem;
-//     line-height: 1.6rem;
-// }

@@ -26,7 +26,7 @@ export default function LayerPop() {
                 onConfirmEvt={() => {
                     console.log('confirm 누름');
                 }}
-            ></Popup>
+            />
         </>
     );
 }

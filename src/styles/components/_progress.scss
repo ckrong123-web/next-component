@@ -1,0 +1,44 @@
+.progress {
+    &__wrap {
+        width: 100%;
+        height: 0.4rem;
+        border-radius: 0.4rem;
+        background-color: $gray-color-2;
+        overflow: hidden;
+    }
+
+    &__bar {
+        display: block;
+        width: 0%;
+        min-width: 0;
+        max-width: 100%;
+        height: 100%;
+        border-radius: 0.4rem;
+        background-color: $blue-color-5;
+    }
+
+    &__foot {
+        margin-top: 0.8rem;
+    }
+
+    &__foot-wrap {
+        display: flex;
+        justify-content: space-between;
+        align-items: flex-end;
+
+        &--no-desc {
+            justify-content: flex-end;
+        }
+    }
+
+    &__description {
+        color: $gray-color-4;
+        @include mix.noto--12(400);
+    }
+
+    &__percent {
+        color: $blue-color-3;
+        letter-spacing: -0.1px;
+        @include mix.noto--14(600);
+    }
+}

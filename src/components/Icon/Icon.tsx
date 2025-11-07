@@ -12,7 +12,7 @@ export default function Icon({ blindTxt, icoName }: IconProps) {
     return (
         <span className="icon">
             <span className="icon__wrap">
-                <i className={icoName}></i>
+                <i className={icoName} />
                 {blindTxt && <span className="blind">{blindTxt}</span>}
             </span>
         </span>

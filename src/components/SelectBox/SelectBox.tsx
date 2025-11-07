@@ -29,7 +29,7 @@ export default function SelectBox({
                     placeholder={placeholder}
                     // menuIsOpen : 메뉴 항상 오픈 옵션
                     {...rest}
-                ></Select>
+                />
             </div>
         </>
     );

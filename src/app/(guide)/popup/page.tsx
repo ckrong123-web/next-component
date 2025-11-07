@@ -7,7 +7,7 @@ import Link from 'next/link';
 export default function ButtonGuidePage() {
     return (
         <Guide title=" 팝업">
-            <PopupGuide></PopupGuide>
+            <PopupGuide />
         </Guide>
     );
 }

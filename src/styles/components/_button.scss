@@ -14,7 +14,7 @@
         align-items: center;
         border-radius: 0.4rem;
         box-sizing: border-box;
-        @include mix.noto--m-12;
+        @include mix.noto--12;
         word-break: keep-all;
         padding: 0 1.2rem;
         transition: 0.2s ease background-color;

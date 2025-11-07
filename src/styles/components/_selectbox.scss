@@ -62,7 +62,7 @@
             margin: 0;
             height: 100%;
             color: $gray-color-6;
-            @include mix.noto--r-14();
+            @include mix.noto--14();
         }
         &__value-container--is-multi {
             gap: 0.4rem 1.2rem;
@@ -88,7 +88,7 @@
             padding: 0.45rem 0.8rem 0.55rem;
             transition: 0.15s ease;
             color: $gray-color-6;
-            @include mix.noto--r-14();
+            @include mix.noto--14();
 
             &:hover,
             &--is-focused {
@@ -111,7 +111,7 @@
         &__multi-value__label {
             padding: 0;
             color: $gray-color-6;
-            @include mix.noto--r-14();
+            @include mix.noto--14();
         }
         &__multi-value__remove {
             width: 1.6rem;
@@ -129,7 +129,7 @@
         &__menu-notice {
             padding: 1.8rem 1.2rem;
             color: $gray-color-4;
-            @include mix.noto--m-12();
+            @include mix.noto--12();
         }
     }
 }

@@ -3,7 +3,6 @@
 // base
 @import 'base/fonts';
 @import 'base/reset';
-@import 'base/utility';
 @import 'base/typography';
 @import 'base/icon';
 @import 'base/common';
@@ -22,3 +21,5 @@
 @import 'components/slider';
 @import 'components/selectbox';
 @import 'components/popup';
+@import 'components/stepper';
+@import 'components/progress';

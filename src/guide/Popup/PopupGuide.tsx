@@ -7,7 +7,7 @@ export default function PopupGuide() {
             <div className="guide__box">
                 <strong className="guide__head">POPUP</strong>
                 <div className="guide__boxWrap guide__boxWrap--solid">
-                    <LayerPop></LayerPop>
+                    <LayerPop />
                 </div>
             </div>
         </>

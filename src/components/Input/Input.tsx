@@ -8,6 +8,8 @@ interface InputProps {
     readOnly?: boolean;
     error?: boolean;
     number?: boolean;
+    className?: string;
+    [key: string]: any;
 }
 
 export default function Input({
@@ -17,10 +19,13 @@ export default function Input({
     readOnly,
     error,
     number,
+    className,
+    ...rest
 }: InputProps) {
     const [isFocus, setIsFocus] = useState(false);
+
     return (
-        <div className="input">
+        <div className={(cn('input'), className)}>
             <div
                 className={cn('input__wrap', {
                     'input--disabled': disabled,
@@ -42,9 +47,9 @@ export default function Input({
                     onBlur={() => {
                         !readOnly && setIsFocus(false);
                     }}
-                    // type={!number ? 'text' : 'number';}
                     type={number ? 'number' : 'text'}
-                ></input>
+                    {...rest}
+                />
             </div>
             {error && (
                 <span className="input__errorMessage">

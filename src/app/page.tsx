@@ -12,6 +12,8 @@ import {
     SliderGuide,
     SelectBoxGuide,
     SwiperGuide,
+    StepperGuide,
+    ProgressGuide,
 } from '@/guide';
 
 export default function page() {
@@ -38,6 +40,8 @@ export default function page() {
                     <Link href="/slider">Slider</Link>
                     <Link href="/selectbox">SelectBox</Link>
                     <Link href="/swiper">Slide (swiper)</Link>
+                    <Link href="/stepper">stepper</Link>
+                    <Link href="/progress">progress</Link>
                 </div>
                 <div
                     style={{
@@ -71,6 +75,12 @@ export default function page() {
                     </div>
                     <div>
                         <SwiperGuide />
+                    </div>
+                    <div>
+                        <StepperGuide />
+                    </div>
+                    <div>
+                        <ProgressGuide />
                     </div>
                 </div>
             </div>

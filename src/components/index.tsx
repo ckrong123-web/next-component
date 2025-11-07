@@ -6,4 +6,6 @@ export { Tab } from '@/components/Tab';
 export { Radio } from '@/components/Radio';
 export { Slider } from '@/components/Slider';
 export { SelectBox } from '@/components/SelectBox';
+export { Stepper } from '@/components/Stepper';
 export { Popup } from '@/components/Popup';
+export { Progress } from '@/components/Progress';

@@ -16,17 +16,22 @@ export default function InputGuide() {
                                 gap: '0.45rem',
                             }}
                         >
-                            <Input />
-                            <Input defaultValue="TXT" />
-                            <Input placeholder="TXT" />
+                            <Input name="InputName01" />
+                            <Input name="InputName02" defaultValue="TXT" />
+                            <Input name="InputName03" placeholder="TXT" />
                         </div>
                         <div className="guide__desc">
                             컴포넌트명 : Input <br />
                             Props : defaultValue | placeholder | disabled |
-                            readOnly <br />
+                            readOnly | className | name | ...rest <br />
                             Props defaultValue(string) 추가시 디폴트밸류 설정{' '}
                             <br />
                             Props placeholder(string) 추가시 플레이스홀더 설정
+                            <br />
+                            Props className(string) 추가시 .input에 className을
+                            넘겨줄 수 있음
+                            <br />
+                            이외 props는 ...rest로 input에 넘어감
                         </div>
                     </div>
                     <span className="guide__boxName">
@@ -40,8 +45,16 @@ export default function InputGuide() {
                                 gap: '0.45rem',
                             }}
                         >
-                            <Input disabled defaultValue="TXT" />
-                            <Input readOnly placeholder="TXT" />
+                            <Input
+                                name="InputName04"
+                                disabled
+                                defaultValue="TXT"
+                            />
+                            <Input
+                                name="InputName05"
+                                readOnly
+                                placeholder="TXT"
+                            />
                         </div>
                         <div className="guide__desc">
                             Props : disabled ( 비활성화 )<br />
@@ -57,7 +70,11 @@ export default function InputGuide() {
                                 gap: '0.45rem',
                             }}
                         >
-                            <Input error defaultValue="TXT" />
+                            <Input
+                                name="InputName06"
+                                error
+                                defaultValue="TXT"
+                            />
                         </div>
                         <div className="guide__desc">Props : error</div>
                     </div>
@@ -70,7 +87,7 @@ export default function InputGuide() {
                                 gap: '0.45rem',
                             }}
                         >
-                            <Input number />
+                            <Input name="InputName07" number />
                         </div>
                         <div className="guide__desc">Props : number</div>
                     </div>

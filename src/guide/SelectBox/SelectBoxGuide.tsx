@@ -16,7 +16,7 @@ export default function SelectBoxGuide() {
             <div className="guide__boxWrap">
                 <span className="guide__boxName">기본</span>
                 <div className="guide__boxBody">
-                    <SelectBox options={options}></SelectBox>
+                    <SelectBox options={options} />
                     <div className="guide__desc">
                         컴포넌트명 : Select
                         <br /> Props : options | isSearch | placeholder
@@ -31,7 +31,7 @@ export default function SelectBoxGuide() {
                 </div>
                 <span className="guide__boxName">이외 props 넘김 테스트트</span>
                 <div className="guide__boxBody">
-                    <SelectBox options={options} isMulti></SelectBox>
+                    <SelectBox options={options} isMulti />
                 </div>
             </div>
         </div>
