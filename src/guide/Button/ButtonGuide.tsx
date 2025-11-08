@@ -113,7 +113,7 @@ export default function ButtonGuide() {
                             }}
                         >
                             <IconButton icoName="ico-add" tooltip="추가" />
-                            <IconButton icoName="ico-minus" tooltip="제거" />
+                            <IconButton icoName="ico-remove" tooltip="제거" />
                             <IconButton
                                 icoName="ico-arrowUp"
                                 tooltip="위로 이동"

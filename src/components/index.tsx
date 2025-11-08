@@ -9,3 +9,4 @@ export { SelectBox } from '@/components/SelectBox';
 export { Stepper } from '@/components/Stepper';
 export { Popup } from '@/components/Popup';
 export { Progress } from '@/components/Progress';
+export { DigitalWallet } from '@/components/DigitalWallet';

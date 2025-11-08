@@ -14,7 +14,8 @@
             display: inline-block;
             width: 100%;
             height: 100%;
-            background-size: cover;
+            background-size: contain;
+            background-repeat: no-repeat;
             background-position: center;
         }
     }
@@ -31,17 +32,14 @@
     &-arrowDown--333 {
         background: ico-arrowDown('333');
     }
-    &-arrowDown--main {
-        background: ico-arrowDown('0260EB');
+    &-arrowRight {
+        background: ico-arrowRight();
     }
     &-arrowUp {
         background: ico-arrowUp();
     }
     &-arrowUp--333 {
         background: ico-arrowUp('333');
-    }
-    &-arrowUp--main {
-        background: ico-arrowUp('0260EB');
     }
     &-close {
         background: ico-close();
@@ -58,11 +56,11 @@
     &-delete--333 {
         background: ico-delete('333');
     }
-    &-earth {
-        background: ico-earth();
+    &-doubleArrowDown {
+        background: ico-doubleArrowDown();
     }
-    &-exelDown {
-        background: ico-exelDown();
+    &-doubleArrowUp {
+        background: ico-doubleArrowUp();
     }
     &-link {
         background: ico-link();
@@ -79,14 +77,17 @@
     &-minus {
         background: ico-minus();
     }
+    &-minus--333 {
+        background: ico-minus('333');
+    }
     &-plus {
         background: ico-plus();
     }
     &-plus--333 {
         background: ico-plus('333');
     }
-    &-print {
-        background: ico-print();
+    &-remove {
+        background: ico-remove();
     }
     &-reset {
         background: ico-reset();
@@ -97,19 +98,10 @@
     &-save {
         background: ico-save();
     }
-    &-tableMinus {
-        background: ico-tableMinus();
-    }
-    &-tableMinus--333 {
-        background: ico-tableMinus('333');
-    }
     &-upload {
         background: ico-upload();
     }
     &-upload--666 {
         background: ico-upload('666');
-    }
-    &-upload--0260EB {
-        background: ico-upload('0260EB');
     }
 }

@@ -14,7 +14,23 @@ import {
     SwiperGuide,
     StepperGuide,
     ProgressGuide,
+    IconGuide,
+    DigitalWalletGuide,
 } from '@/guide';
+
+const listData = [
+    { compnent: 'Button', guide: <ButtonGuide /> },
+    { compnent: 'Input', guide: <InputGuide /> },
+    { compnent: 'Tab', guide: <TabGuide /> },
+    { compnent: 'Radio', guide: <RadioGuide /> },
+    { compnent: 'Slider', guide: <SliderGuide /> },
+    { compnent: 'SelectBox', guide: <SelectBoxGuide /> },
+    { compnent: 'Swiper', name: 'Slide (swiper)', guide: <SwiperGuide /> },
+    { compnent: 'Stepper', guide: <StepperGuide /> },
+    { compnent: 'Progress', guide: <ProgressGuide /> },
+    { compnent: 'Icon', guide: <IconGuide /> },
+    { compnent: 'DigitalWallet', guide: <DigitalWalletGuide /> },
+];
 
 export default function page() {
     return (
@@ -32,16 +48,16 @@ export default function page() {
                         gap: '10px',
                     }}
                 >
-                    <Link href="/popup">Popup</Link>
-                    <Link href="/button">Button</Link>
-                    <Link href="/input">Input</Link>
-                    <Link href="/tab">Tab</Link>
-                    <Link href="/radio">Radio</Link>
-                    <Link href="/slider">Slider</Link>
-                    <Link href="/selectbox">SelectBox</Link>
-                    <Link href="/swiper">Slide (swiper)</Link>
-                    <Link href="/stepper">stepper</Link>
-                    <Link href="/progress">progress</Link>
+                    {listData.map((item, num) => {
+                        return (
+                            <Link
+                                href={`/${item.compnent.toLowerCase()}`}
+                                key={num}
+                            >
+                                {item.name ? item.name : item.compnent}
+                            </Link>
+                        );
+                    })}
                 </div>
                 <div
                     style={{
@@ -55,33 +71,9 @@ export default function page() {
                     }}
                 >
                     <div>{/* <Popupguide /> */}</div>
-                    <div>
-                        <ButtonGuide />
-                    </div>
-                    <div>
-                        <InputGuide />
-                    </div>
-                    <div>
-                        <TabGuide />
-                    </div>
-                    <div>
-                        <RadioGuide />
-                    </div>
-                    <div>
-                        <SliderGuide />
-                    </div>
-                    <div>
-                        <SelectBoxGuide />
-                    </div>
-                    <div>
-                        <SwiperGuide />
-                    </div>
-                    <div>
-                        <StepperGuide />
-                    </div>
-                    <div>
-                        <ProgressGuide />
-                    </div>
+                    {listData.map((item, num) => {
+                        return <div key={num}>{item.guide}</div>;
+                    })}
                 </div>
             </div>
         </>

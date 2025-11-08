@@ -8,6 +8,7 @@ interface IconButtonProps {
     tooltip?: string;
     tooltipBottom?: boolean;
     onClickEvt?: () => void;
+    icoColor?: string;
 }
 
 export default function IconButton({
@@ -15,6 +16,7 @@ export default function IconButton({
     tooltipBottom,
     tooltip,
     onClickEvt,
+    icoColor = 'fff',
 }: IconButtonProps) {
     const [tooltipShow, setTooltipShow] = useState(false);
     return (
@@ -32,7 +34,7 @@ export default function IconButton({
         >
             <div className={cn('btnIco__wrap')}>
                 <span className="btnIco__icon">
-                    <Icon icoName={icoName} />
+                    <Icon icoName={icoName} color={icoColor} />
                 </span>
                 {tooltip && (
                     <div

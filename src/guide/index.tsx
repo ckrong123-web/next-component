@@ -10,3 +10,5 @@ export { SelectBoxGuide } from '@/guide/SelectBox';
 export { SwiperGuide } from '@/guide/Swiper';
 export { StepperGuide } from '@/guide/Stepper';
 export { ProgressGuide } from '@/guide/Progress';
+export { IconGuide } from '@/guide/Icon';
+export { DigitalWalletGuide } from '@/guide/DigitalWallet';

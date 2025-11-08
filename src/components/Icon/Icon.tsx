@@ -4,10 +4,7 @@ import cn from 'classnames';
 interface IconProps {
     blindTxt?: string;
     icoName: string;
-    // size?: string;
-    // height?: string;
 }
-
 export default function Icon({ blindTxt, icoName }: IconProps) {
     return (
         <span className="icon">
