@@ -1,5 +1,16 @@
 import React from 'react';
-// import { Slider } from '@/components';
+import Image from 'next/image';
+import 'swiper/css';
+
+import { Slide } from '@/components';
+
+import img01 from '@img/slide01.jpg';
+import img02 from '@img/slide02.jpg';
+import img03 from '@img/slide03.jpg';
+import img04 from '@img/slide04.jpg';
+import img05 from '@img/slide05.jpg';
+
+const imgGroup = [img01, img02, img03, img04, img05];
 
 export default function SwiperGuide() {
     return (
@@ -8,6 +19,15 @@ export default function SwiperGuide() {
             <div className="guide__boxWrap">
                 <span className="guide__boxName">기본</span>
                 <div className="guide__boxBody">
+                    <Slide>
+                        {imgGroup.map((item) => {
+                            return (
+                                <Slide.Item>
+                                    <Image src={item} alt="" />
+                                </Slide.Item>
+                            );
+                        })}
+                    </Slide>
                     {/* 
                     <div className="guide__desc">
                         컴포넌트명 : Slider Props: range | min | max

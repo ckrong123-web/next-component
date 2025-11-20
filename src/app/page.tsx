@@ -72,7 +72,13 @@ export default function page() {
                 >
                     <div>{/* <Popupguide /> */}</div>
                     {listData.map((item, num) => {
-                        return <div key={num}>{item.guide}</div>;
+                        return (
+                            <div key={num} className="guide">
+                                <div className="guide__wrap guide__wrap--listpage">
+                                    {item.guide}
+                                </div>
+                            </div>
+                        );
                     })}
                 </div>
             </div>

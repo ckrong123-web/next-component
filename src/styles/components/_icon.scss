@@ -32,8 +32,17 @@
     &-arrowDown--333 {
         background: ico-arrowDown('333');
     }
+    &-arrowLeft {
+        background: ico-arrowLeft();
+    }
+    &-arrowLeft--blue {
+        background: ico-arrowLeft('0260eb');
+    }
     &-arrowRight {
         background: ico-arrowRight();
+    }
+    &-arrowRight--blue {
+        background: ico-arrowRight('0260eb');
     }
     &-arrowUp {
         background: ico-arrowUp();

@@ -7,6 +7,7 @@ export { Radio } from '@/components/Radio';
 export { Slider } from '@/components/Slider';
 export { SelectBox } from '@/components/SelectBox';
 export { Stepper } from '@/components/Stepper';
+export { Slide } from '@/components/Slide';
 export { Popup } from '@/components/Popup';
 export { Progress } from '@/components/Progress';
 export { DigitalWallet } from '@/components/DigitalWallet';

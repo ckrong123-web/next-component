@@ -1,0 +1,35 @@
+@use 'abstracts/variables' as var;
+@use 'abstracts/functions' as func;
+@use 'abstracts/mixins' as mix;
+
+.slide {
+    border: 1px solid red;
+    width: 100%;
+    .swiper-container {
+        min-width: 0;
+        min-height: 0;
+    }
+    &__wrap {
+        display: flex;
+    }
+    &__nav {
+    }
+    &__nav-btn {
+        width: 4.4rem;
+        height: 4.4rem;
+        padding: 0.7rem;
+        border-radius: 50%;
+        border-radius: 50%;
+        border: 1px solid $gray-color-3;
+    }
+}
+
+.slide-item {
+    img {
+        width: 100%;
+        max-width: 100%;
+        aspect-ratio: 5 / 3;
+        display: block;
+        height: fit-content;
+    }
+}

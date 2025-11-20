@@ -3,6 +3,9 @@ $guideColor--solidBg: #edf2f9;
 $guideColor--desc: #f0f0f0;
 
 .guide {
+    &__wrap--listpage {
+        max-width: calc(100vw - 17rem);
+    }
     &__prev {
         display: inline-block;
         width: 3.2rem;
