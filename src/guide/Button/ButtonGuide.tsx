@@ -1,5 +1,12 @@
 import React from 'react';
 import { Button, AccoButton, IconButton, Icon } from '@/components';
+import {
+    AddIcon,
+    RemoveIcon,
+    ArrowUpIcon,
+    ArrowDownIcon,
+    CopyIcon,
+} from '@/icon';
 
 export default function ButtonGuide() {
     return (
@@ -112,18 +119,18 @@ export default function ButtonGuide() {
                                 flexWrap: 'wrap',
                             }}
                         >
-                            <IconButton icoName="ico-add" tooltip="추가" />
-                            <IconButton icoName="ico-remove" tooltip="제거" />
+                            <IconButton icon={<AddIcon />} tooltip="추가" />
+                            <IconButton icon={<RemoveIcon />} tooltip="제거" />
                             <IconButton
-                                icoName="ico-arrowUp"
+                                icon={<ArrowUpIcon />}
                                 tooltip="위로 이동"
                             />
                             <IconButton
-                                icoName="ico-arrowDown"
+                                icon={<ArrowDownIcon />}
                                 tooltip="아래로 이동"
                             />
                             <IconButton
-                                icoName="ico-copy"
+                                icon={<CopyIcon />}
                                 tooltip="복제"
                                 tooltipBottom
                             />

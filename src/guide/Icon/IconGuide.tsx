@@ -1,37 +1,42 @@
 import React from 'react';
-import { Icon } from '@/components';
+import {
+    AddIcon,
+    ArrowDownIcon,
+    ArrowLeftIcon,
+    ArrowRightIcon,
+    ArrowUpIcon,
+    CloseIcon,
+    CopyIcon,
+    DeleteIcon,
+    DoubleDownIcon,
+    DoubleUpIcon,
+    LinkIcon,
+    MinusIcon,
+    PlusIcon,
+    RemoveIcon,
+    ResetIcon,
+    SaveIcon,
+    UploadIcon,
+} from '@/icon';
 
 const iconList = [
-    { name: 'ico-add', blind: 'add icon' },
-    { name: 'ico-arrowDown' },
-    { name: 'ico-arrowDown--333' },
-    { name: 'ico-arrowLeft' },
-    { name: 'ico-arrowLeft--blue' },
-    { name: 'ico-arrowRight' },
-    { name: 'ico-arrowRight--blue' },
-    { name: 'ico-arrowUp' },
-    { name: 'ico-arrowUp--333' },
-    { name: 'ico-close' },
-    { name: 'ico-close--333' },
-    { name: 'ico-copy' },
-    { name: 'ico-delete' },
-    { name: 'ico-doubleArrowDown' },
-    { name: 'ico-doubleArrowUp' },
-    { name: 'ico-link' },
-    { name: 'ico-link--333' },
-    { name: 'ico-link--666' },
-    { name: 'ico-link--999' },
-    { name: 'ico-link--999' },
-    { name: 'ico-minus' },
-    { name: 'ico-minus--333' },
-    { name: 'ico-plus' },
-    { name: 'ico-plus--333' },
-    { name: 'ico-remove' },
-    { name: 'ico-reset' },
-    { name: 'ico-reset--333' },
-    { name: 'ico-save' },
-    { name: 'ico-upload' },
-    { name: 'ico-upload--666' },
+    { name: 'AddIcon', icon: <AddIcon blindTxt="add" /> },
+    { name: 'ArrowDownIcon', icon: <ArrowDownIcon /> },
+    { name: 'ArrowLeftIcon', icon: <ArrowLeftIcon /> },
+    { name: 'ArrowRightIcon', icon: <ArrowRightIcon /> },
+    { name: 'ArrowUpIcon', icon: <ArrowUpIcon /> },
+    { name: 'CloseIcon', icon: <CloseIcon /> },
+    { name: 'CopyIcon', icon: <CopyIcon /> },
+    { name: 'DeleteIcon', icon: <DeleteIcon /> },
+    { name: 'DoubleDownIcon', icon: <DoubleDownIcon /> },
+    { name: 'DoubleUpIcon', icon: <DoubleUpIcon /> },
+    { name: 'LinkIcon', icon: <LinkIcon /> },
+    { name: 'MinusIcon', icon: <MinusIcon /> },
+    { name: 'PlusIcon', icon: <PlusIcon /> },
+    { name: 'RemoveIcon', icon: <RemoveIcon /> },
+    { name: 'ResetIcon', icon: <ResetIcon /> },
+    { name: 'SaveIcon', icon: <SaveIcon /> },
+    { name: 'Upload', icon: <UploadIcon /> },
 ];
 
 export default function InputGuide() {
@@ -58,6 +63,7 @@ export default function InputGuide() {
                                                 justifyContent: 'center',
                                                 alignItems: 'center',
                                             }}
+                                            key={num}
                                         >
                                             <div
                                                 style={{
@@ -65,14 +71,7 @@ export default function InputGuide() {
                                                     height: '4rem',
                                                 }}
                                             >
-                                                <Icon
-                                                    blindTxt={
-                                                        item.blind
-                                                            ? item.blind
-                                                            : undefined
-                                                    }
-                                                    icoName={item.name}
-                                                />
+                                                {item.icon}
                                             </div>
                                             <span className="guide-txt--12">
                                                 {item.name}

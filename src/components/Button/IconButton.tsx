@@ -4,19 +4,17 @@ import cn from 'classnames';
 
 interface IconButtonProps {
     tableHead?: boolean;
-    icoName: string;
+    icon: React.ReactNode;
     tooltip?: string;
     tooltipBottom?: boolean;
     onClickEvt?: () => void;
-    icoColor?: string;
 }
 
 export default function IconButton({
-    icoName,
+    icon,
     tooltipBottom,
     tooltip,
     onClickEvt,
-    icoColor = 'fff',
 }: IconButtonProps) {
     const [tooltipShow, setTooltipShow] = useState(false);
     return (
@@ -33,9 +31,7 @@ export default function IconButton({
             }}
         >
             <div className={cn('btnIco__wrap')}>
-                <span className="btnIco__icon">
-                    <Icon icoName={icoName} color={icoColor} />
-                </span>
+                <span className="btnIco__icon">{icon}</span>
                 {tooltip && (
                     <div
                         className={cn('btnIco__tooltip', {

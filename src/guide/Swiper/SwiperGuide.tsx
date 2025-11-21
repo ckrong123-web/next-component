@@ -20,9 +20,9 @@ export default function SwiperGuide() {
                 <span className="guide__boxName">기본</span>
                 <div className="guide__boxBody">
                     <Slide>
-                        {imgGroup.map((item) => {
+                        {imgGroup.map((item, num) => {
                             return (
-                                <Slide.Item>
+                                <Slide.Item key={num}>
                                     <Image src={item} alt="" />
                                 </Slide.Item>
                             );

@@ -1,0 +1,19 @@
+export { default as IconBase } from './IconBase/IconBase';
+
+export { default as AddIcon } from './Add/Add';
+export { default as ArrowDownIcon } from './Arrow/ArrowDown';
+export { default as ArrowLeftIcon } from './Arrow/ArrowLeft';
+export { default as ArrowRightIcon } from './Arrow/ArrowRight';
+export { default as ArrowUpIcon } from './Arrow/ArrowUp';
+export { default as CloseIcon } from './Close/Close';
+export { default as CopyIcon } from './Copy/Copy';
+export { default as DeleteIcon } from './Delete/Delete';
+export { default as DoubleDownIcon } from './Double/DoubleDown';
+export { default as DoubleUpIcon } from './Double/DoubleUp';
+export { default as LinkIcon } from './Link/Link';
+export { default as MinusIcon } from './Minus/Minus';
+export { default as PlusIcon } from './Plus/Plus';
+export { default as RemoveIcon } from './Remove/Remove';
+export { default as ResetIcon } from './Reset/Reset';
+export { default as SaveIcon } from './Save/Save';
+export { default as UploadIcon } from './Upload/Upload';

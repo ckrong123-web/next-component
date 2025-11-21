@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import { Icon } from '@/components';
+import { ArrowDownIcon, ArrowUpIcon } from '@/icon';
 import cn from 'classnames';
 
 interface AccoButtonProps {
@@ -17,10 +17,11 @@ export default function AccoButton({ isOpen, onClickEvt }: AccoButtonProps) {
         <button className="btnAcco">
             <div className={cn('btnAcco__wrap')} onClick={handleClickEvt}>
                 <span className="btnAcco__icon">
-                    <Icon
-                        icoName={isToggleOpen ? 'ico-arrowUp' : 'ico-arrowDown'}
-                        blindTxt={isToggleOpen ? '닫기' : '열기'}
-                    />
+                    {isToggleOpen ? (
+                        <ArrowDownIcon blindTxt="닫기" />
+                    ) : (
+                        <ArrowUpIcon blindTxt="열기" />
+                    )}
                 </span>
             </div>
         </button>

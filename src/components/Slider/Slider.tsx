@@ -36,8 +36,6 @@ export default function SliderComponents({
         );
     };
 
-    console.log(tooltip);
-
     return (
         <div className="slider">
             <Slider

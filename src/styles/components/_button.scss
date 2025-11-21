@@ -67,6 +67,10 @@
         align-items: center;
         width: 2rem;
         height: 2rem;
+
+        .ico {
+            color: #fff !important;
+        }
     }
 }
 
@@ -92,6 +96,9 @@
         align-items: center;
         width: 2rem;
         height: 2rem;
+        .ico {
+            color: #fff !important;
+        }
     }
     &__tooltip {
         display: flex;

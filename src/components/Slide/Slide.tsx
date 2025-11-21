@@ -62,8 +62,8 @@ export default function Slide({
                     </div>
                 )}
                 <Swiper {...slideOpt} {...rest}>
-                    {Children.map(children, (item) => (
-                        <SwiperSlide className="slide__item">
+                    {Children.map(children, (item, num) => (
+                        <SwiperSlide className="slide__item" key={num}>
                             {item}
                         </SwiperSlide>
                     ))}

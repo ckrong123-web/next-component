@@ -25,7 +25,6 @@ export default function DigitalWalletItem({
             location.current = '0';
         } else {
             location.current = `${(Number(index) * 58 + 36) / 10}rem`;
-            console.log(location.current);
         }
         return location.current;
     };
