@@ -1,14 +1,16 @@
-import React, { useEffect, useRef, useState } from 'react';
+import React, { useRef } from 'react';
 import Link from 'next/link';
-import { Icon } from '@/components';
 import { useDigitalWallet } from './DigitalWallet';
+import { ArrowRightIcon } from '@/icon';
 
 interface DigitalWalletItemProps {
     index?: number;
     tit: string;
     txt?: string;
-    href: string;
-    background: string;
+    href?: string;
+    background?: string;
+    onClickEvt?: () => void;
+    [key: string]: any;
 }
 
 export default function DigitalWalletItem({
@@ -16,7 +18,9 @@ export default function DigitalWalletItem({
     tit,
     txt,
     href,
-    background,
+    background = '#0260eb',
+    onClickEvt,
+    ...rest
 }: DigitalWalletItemProps) {
     const { length } = useDigitalWallet();
     const location = useRef('0');
@@ -28,6 +32,11 @@ export default function DigitalWalletItem({
         }
         return location.current;
     };
+    const Tag: any = href ? Link : 'button';
+
+    const handleClickEvt = () => {
+        onClickEvt && onClickEvt();
+    };
 
     return (
         <li
@@ -37,8 +46,13 @@ export default function DigitalWalletItem({
                 backgroundColor: background,
                 zIndex: length - Number(index),
             }}
+            {...rest}
         >
-            <Link className="digitalWallet__card-itemWrap" href={href}>
+            <Tag
+                className="digitalWallet__card-itemWrap"
+                href={href}
+                onClick={handleClickEvt}
+            >
                 <div className="digitalWallet__card-itemHead">
                     <span className="digitalWallet__card-itemTit">{tit}</span>
                     {txt && (
@@ -47,10 +61,10 @@ export default function DigitalWalletItem({
                         </span>
                     )}
                     <span className="digitalWallet__card-itemIcon">
-                        <Icon icoName="ico-arrowRight" />
+                        <ArrowRightIcon />
                     </span>
                 </div>
-            </Link>
+            </Tag>
         </li>
     );
 }

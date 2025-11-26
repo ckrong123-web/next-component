@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from 'react';
-import { Icon } from '@/components';
+import { ArrowDownIcon, ArrowUpIcon } from '@/icon';
 import { useStepper } from './Stepper';
 import cn from 'classnames';
 
@@ -30,9 +30,9 @@ export default function StepperBtn({ count, num = 1 }: StepperBtnProps) {
 
     const thisIcon = () => {
         if (count === 'down') {
-            return <Icon icoName={'ico-arrowDown--333'} />;
+            return <ArrowDownIcon />;
         } else if (count === 'up') {
-            return <Icon icoName={'ico-arrowUp--333'} />;
+            return <ArrowUpIcon />;
         }
     };
 

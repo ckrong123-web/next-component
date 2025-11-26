@@ -72,6 +72,10 @@
         display: inline-block;
         width: 16px;
         opacity: 0.6;
+
+        .ico {
+            color: #fff !important;
+        }
     }
 
     &__afterArea {
@@ -144,6 +148,7 @@
         color: #fff;
         flex-grow: 1;
         flex-shrink: 1;
+        text-align: left;
     }
 
     &__card-itemTxt {
@@ -159,7 +164,11 @@
     &__card-itemIcon {
         width: 1.6rem;
         height: 1.6rem;
-        margin-bottom: 0.6rem;
+        margin-left: 0.6rem;
+
+        .ico {
+            color: #fff !important;
+        }
     }
 
     &__btnArea {
@@ -215,5 +224,9 @@
     &__btnIcon {
         width: 1.6rem;
         height: 2.1rem;
+
+        .ico {
+            color: #fff !important;
+        }
     }
 }

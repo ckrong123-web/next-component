@@ -20,7 +20,7 @@ import {
 } from '@/icon';
 
 const iconList = [
-    { name: 'AddIcon', icon: <AddIcon blindTxt="add" /> },
+    { name: 'AddIcon', icon: <AddIcon blindTxt="add icon" /> },
     { name: 'ArrowDownIcon', icon: <ArrowDownIcon /> },
     { name: 'ArrowLeftIcon', icon: <ArrowLeftIcon /> },
     { name: 'ArrowRightIcon', icon: <ArrowRightIcon /> },
@@ -36,7 +36,7 @@ const iconList = [
     { name: 'RemoveIcon', icon: <RemoveIcon /> },
     { name: 'ResetIcon', icon: <ResetIcon /> },
     { name: 'SaveIcon', icon: <SaveIcon /> },
-    { name: 'Upload', icon: <UploadIcon /> },
+    { name: 'UploadIcon', icon: <UploadIcon /> },
 ];
 
 export default function InputGuide() {

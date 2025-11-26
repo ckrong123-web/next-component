@@ -1,11 +1,14 @@
 import React from 'react';
-import { Button, AccoButton, IconButton, Icon } from '@/components';
+import { Button, AccoButton, IconButton } from '@/components';
 import {
     AddIcon,
     RemoveIcon,
     ArrowUpIcon,
     ArrowDownIcon,
     CopyIcon,
+    DeleteIcon,
+    LinkIcon,
+    ResetIcon,
 } from '@/icon';
 
 export default function ButtonGuide() {
@@ -28,10 +31,7 @@ export default function ButtonGuide() {
                                     console.log('클릭');
                                 }}
                             >
-                                <Icon
-                                    blindTxt="삭제 아이콘"
-                                    icoName="ico-delete--333"
-                                />
+                                <DeleteIcon />
                                 삭제
                             </Button>
                             <Button
@@ -39,10 +39,7 @@ export default function ButtonGuide() {
                                     console.log('클릭');
                                 }}
                             >
-                                <Icon
-                                    blindTxt="링크 아이콘"
-                                    icoName="ico-reset--333"
-                                />
+                                <ResetIcon />
                                 초기화
                             </Button>
                             <Button>신규</Button>
@@ -72,10 +69,7 @@ export default function ButtonGuide() {
                             }}
                         >
                             <Button type="blue">
-                                <Icon
-                                    blindTxt="링크 아이콘"
-                                    icoName="ico-link"
-                                />
+                                <LinkIcon />
                                 CHECK
                             </Button>
                             <Button type="blue">접수</Button>
@@ -93,11 +87,12 @@ export default function ButtonGuide() {
                         >
                             <Button type="gray">신규</Button>
                             <Button type="gray">
-                                신규 <Icon icoName="ico-link--999" />
+                                신규 <LinkIcon />
                             </Button>
                             <Button type="darkGray">신규</Button>
                             <Button type="darkGray">
-                                신규 <Icon icoName="ico-link--666" />
+                                신규
+                                <LinkIcon />
                             </Button>
                         </div>
                         <div className="guide__desc">
@@ -119,34 +114,41 @@ export default function ButtonGuide() {
                                 flexWrap: 'wrap',
                             }}
                         >
-                            <IconButton icon={<AddIcon />} tooltip="추가" />
-                            <IconButton icon={<RemoveIcon />} tooltip="제거" />
+                            <IconButton tooltip="추가">
+                                <AddIcon />
+                            </IconButton>
+                            <IconButton tooltip="제거">
+                                <RemoveIcon />
+                            </IconButton>
+                            <IconButton tooltip="위로 이동">
+                                <ArrowUpIcon />
+                            </IconButton>
                             <IconButton
-                                icon={<ArrowUpIcon />}
-                                tooltip="위로 이동"
-                            />
-                            <IconButton
-                                icon={<ArrowDownIcon />}
                                 tooltip="아래로 이동"
-                            />
-                            <IconButton
-                                icon={<CopyIcon />}
-                                tooltip="복제"
-                                tooltipBottom
-                            />
+                                tooltipLocationAuto
+                            >
+                                <ArrowDownIcon />
+                            </IconButton>
+                            <IconButton tooltip="복제" tooltipBottom>
+                                <CopyIcon />
+                            </IconButton>
                         </div>
                         <div className="guide__desc">
                             컴포넌트명 : IconButton <br />
-                            Props : tableHead | icoName | tooltip |
-                            tooltipBottom | onClickEvt
+                            Props : icon | tooltip | tooltipBottom |
+                            tooltipLocationAuto | onClickEvt
                             <br />
-                            Props icoName( string ) 필수로 넘겨야 하는 값,
-                            class값으로 넘어가서 아이콘을 불러옴
+                            Props icon( ReactNode ) 필수로 넘겨야 하는 값,
+                            아이콘 컴포넌트를 집어넣는다.
                             <br />
                             Props tooltip 추가시 툴팁 생성(기본 : 상단)
                             <br />
                             Props tooltipBottom 추가시 툴팁이 하단에서 나타남
                             (기본 : 상단)
+                            <br />
+                            Props tooltipLocationAuto 추가시 툴팁의 위치가
+                            뷰포트상 위치에 따라 자동으로 상단 혹은 하단으로
+                            계산됨
                             <br />
                             Props onClickEvt 으로 이벤트 넘김 시 버튼 클릭시
                             이벤트를 컴포넌트 밖에서 넘길 수 있음

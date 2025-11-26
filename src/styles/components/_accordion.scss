@@ -1,0 +1,29 @@
+.accordion-item {
+    border-bottom: 1px solid $gray-color-3;
+    &--active {
+        .accordion-item__title {
+            color: $blue-point-1;
+        }
+    }
+    &__head {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        padding: 1.6rem 2rem;
+    }
+    &__title {
+        font-family: var.$font-noto;
+        font-weight: 600;
+        font-size: 1.6rem;
+    }
+    &__btn {
+        justify-self: flex-end;
+        margin-left: auto;
+    }
+    &__body {
+        border-top: 1px solid $blue-color-5;
+        padding: 2.4rem 1.2rem;
+        margin: 0 1.6rem;
+        @include mix.noto--14();
+    }
+}

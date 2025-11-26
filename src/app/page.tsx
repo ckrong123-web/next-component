@@ -16,6 +16,7 @@ import {
     ProgressGuide,
     IconGuide,
     DigitalWalletGuide,
+    AccordionGuide,
 } from '@/guide';
 
 const listData = [
@@ -30,21 +31,22 @@ const listData = [
     { compnent: 'Progress', guide: <ProgressGuide /> },
     { compnent: 'Icon', guide: <IconGuide /> },
     { compnent: 'DigitalWallet', guide: <DigitalWalletGuide /> },
+    { compnent: 'Accordion', guide: <AccordionGuide /> },
 ];
 
 export default function page() {
     return (
         <>
-            <div style={{ display: 'flex' }}>
+            <div>
                 <div
                     style={{
                         padding: '30px 15px',
-                        position: 'sticky',
+                        position: 'fixed',
                         top: '0',
                         display: 'flex',
                         flexDirection: 'column',
                         height: 'fit-content',
-                        flexBasis: '170px',
+                        width: '170px',
                         gap: '10px',
                     }}
                 >
@@ -62,11 +64,7 @@ export default function page() {
                 <div
                     style={{
                         padding: '30px 20px',
-                        flexGrow: '1',
-                        flexShrink: '1',
-                        gap: '40px',
-                        display: 'flex',
-                        flexDirection: 'column',
+                        marginLeft: '170px',
                         borderLeft: '1px solid rgba(191, 214, 230, 0.5)',
                     }}
                 >

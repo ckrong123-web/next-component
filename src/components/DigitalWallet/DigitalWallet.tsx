@@ -1,18 +1,16 @@
 import React, {
     useState,
     useRef,
-    useCallback,
     useEffect,
     createContext,
     useContext,
     ReactElement,
-    useLayoutEffect,
 } from 'react';
 import cn from 'classnames';
-import { Icon } from '@/components';
 import { gsap } from 'gsap';
 import { useGSAP } from '@gsap/react';
 import DigitalWalletItem from './DigitalWalletItem';
+import { ArrowRightIcon, DoubleDownIcon, DoubleUpIcon } from '@/icon';
 
 interface DigitalWalletContextProps {
     length: number;
@@ -153,15 +151,15 @@ export default function DigitalWallet({ children }: DigitalWalletProps) {
                 <div className="digitalWallet__wrap">
                     <div className="digitalWallet__beforeArea">
                         <ul className="digitalWallet__befoCard-list">
-                            <li className="digitalWallet__befoCard-item digitalWallet__befoCard-item--1"></li>
-                            <li className="digitalWallet__befoCard-item digitalWallet__befoCard-item--2"></li>
+                            <li className="digitalWallet__befoCard-item digitalWallet__befoCard-item--1" />
+                            <li className="digitalWallet__befoCard-item digitalWallet__befoCard-item--2" />
                             <li className="digitalWallet__befoCard-item digitalWallet__befoCard-item--3">
                                 <div className="digitalWallet__befoCard-head">
                                     <span className="digitalWallet__befoCard-tit">
                                         MY CARD
                                     </span>
                                     <span className="digitalWallet__befoCard-Icon">
-                                        <Icon icoName="ico-arrowRight" />
+                                        <ArrowRightIcon />
                                     </span>
                                 </div>
                             </li>
@@ -190,12 +188,9 @@ export default function DigitalWallet({ children }: DigitalWalletProps) {
                             )}
                             <span className="digitalWallet__btnIcon">
                                 {isOpen ? (
-                                    <Icon icoName="ico-doubleArrowUp" />
+                                    <DoubleUpIcon blindTxt="닫기" />
                                 ) : (
-                                    <Icon
-                                        icoName="ico-doubleArrowDown
-"
-                                    />
+                                    <DoubleDownIcon blindTxt="열기" />
                                 )}
                             </span>
                         </button>

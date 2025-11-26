@@ -11,3 +11,4 @@ export { Slide } from '@/components/Slide';
 export { Popup } from '@/components/Popup';
 export { Progress } from '@/components/Progress';
 export { DigitalWallet } from '@/components/DigitalWallet';
+export { Accordion } from '@/components/Accordion';

@@ -3,6 +3,10 @@ $guideColor--solidBg: #edf2f9;
 $guideColor--desc: #f0f0f0;
 
 .guide {
+    margin-top: 4rem;
+    &:first-of-type {
+        margin-top: 0;
+    }
     &__wrap--listpage {
         max-width: calc(100vw - 17rem);
     }
@@ -11,8 +15,6 @@ $guideColor--desc: #f0f0f0;
         width: 3.2rem;
         height: 3.2rem;
         margin-right: 2rem;
-        background: ico-arrowDown('999');
-        transform: rotate(90deg);
     }
     &__name {
         display: flex;

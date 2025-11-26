@@ -25,9 +25,13 @@
             background-color: $blue-color-1;
         }
 
-        > .icon {
+        .icon {
             width: 2rem;
             height: 2rem;
+        }
+
+        .ico {
+            color: $gray-color-6 !important;
         }
     }
     &--blue {
@@ -38,12 +42,23 @@
         &:hover {
             background-color: $blue-color-2;
         }
+        .ico {
+            color: $white-color-1 !important;
+        }
     }
     &--gray {
         color: $gray-color-4;
+
+        .ico {
+            color: $gray-color-4 !important;
+        }
     }
     &--darkGray {
         color: $gray-color-5;
+
+        .ico {
+            color: $gray-color-5 !important;
+        }
     }
 }
 

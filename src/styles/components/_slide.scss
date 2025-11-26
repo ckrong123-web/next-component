@@ -3,28 +3,90 @@
 @use 'abstracts/mixins' as mix;
 
 .slide {
-    border: 1px solid red;
     width: 100%;
+    transition: 0.15s ease opacity;
     .swiper-container {
         min-width: 0;
         min-height: 0;
     }
     &__wrap {
         display: flex;
+        align-items: center;
+        gap: 1.8rem;
+        position: relative;
     }
-    &__nav {
+    &__swiper-wrap {
+        flex-grow: 1;
+        flex-basis: 100%;
+        width: calc(100% - 12.4rem);
     }
     &__nav-btn {
+        display: inline-block;
+        flex-shrink: 0;
         width: 4.4rem;
         height: 4.4rem;
         padding: 0.7rem;
         border-radius: 50%;
-        border-radius: 50%;
         border: 1px solid $gray-color-3;
+        .ico {
+            transition: 0.2s ease;
+        }
+        &:hover {
+            .ico {
+                color: $blue-point-1 !important;
+            }
+        }
+    }
+    &__item {
+        max-width: 100rem;
+        &.swiper-slide-active {
+            .slide-item {
+                opacity: 1;
+            }
+        }
+    }
+    &--notReady {
+        opacity: 0;
+    }
+
+    .swiper-pagination {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        gap: 0.8rem;
+        margin-top: 1.6rem;
+    }
+    .swiper-pagination-bullet {
+        display: block;
+        width: 1.2rem;
+        height: 1.2rem;
+        border-radius: 50%;
+        border: 0.3rem solid $gray-color-3;
+        transition: 0.2s ease;
+    }
+    .swiper-pagination-bullet-active {
+        border-color: $blue-point-1;
+    }
+    .swiper-pagination-progressbar {
+        width: 100%;
+        height: 0.4rem;
+        background-color: $gray-color-3;
+        border-radius: 1rem;
+        overflow: hidden;
+    }
+    .swiper-pagination-progressbar-fill {
+        display: block;
+        transform-origin: left;
+        width: 100%;
+        height: 100%;
+        border-radius: 1rem;
+        background-color: $blue-color-5;
     }
 }
 
 .slide-item {
+    opacity: 0.5;
+    transition: 0.5s ease;
     img {
         width: 100%;
         max-width: 100%;
