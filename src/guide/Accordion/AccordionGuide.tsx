@@ -4,7 +4,7 @@ import { Accordion, AccoButton } from '@/components';
 export default function AccordionGuide() {
     return (
         <div className="guide__box">
-            <strong className="guide__head">아코디언 컴포넌트</strong>
+            <strong className="guide__head">Accordion</strong>
             <div className="guide__boxWrap">
                 <span className="guide__boxName">기본</span>
                 <div className="guide__boxBody">

@@ -3,8 +3,7 @@
 import React from 'react';
 import Link from 'next/link';
 import {
-    Guide,
-    // Popupguide,
+    PopupGuide,
     InputGuide,
     ButtonGuide,
     TabGuide,
@@ -20,6 +19,7 @@ import {
 } from '@/guide';
 
 const listData = [
+    { compnent: 'Popup', guide: <PopupGuide /> },
     { compnent: 'Button', guide: <ButtonGuide /> },
     { compnent: 'Input', guide: <InputGuide /> },
     { compnent: 'Tab', guide: <TabGuide /> },
@@ -68,7 +68,6 @@ export default function page() {
                         borderLeft: '1px solid rgba(191, 214, 230, 0.5)',
                     }}
                 >
-                    <div>{/* <Popupguide /> */}</div>
                     {listData.map((item, num) => {
                         return (
                             <div key={num} className="guide">

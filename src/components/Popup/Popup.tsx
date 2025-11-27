@@ -1,19 +1,19 @@
 import React, { use, useEffect, useState, ReactNode } from 'react';
 import cn from 'classnames';
-import { Icon, Button } from '@/components';
-import { createPortal } from 'react-dom';
-import { CSSProperties } from 'react';
+import { Button } from '@/components';
+import { CloseIcon } from '@/icon';
 
-// import { motion, AnimatePresence, Variants } from 'framer-motion';
+import { AnimatePresence, motion } from 'motion/react';
+
+import { usePopupContext } from '@/context/PopupProvider/PopupProvider';
 
 import { useLayerPopup } from '@/hook/useLayerPopup';
 
 interface PopupProps {
     id: string;
-    className?: 'popup';
+    name: string;
+    className?: string;
     title?: string;
-    isOpen: boolean;
-    setOpen: React.Dispatch<React.SetStateAction<boolean>>;
     children?: ReactNode;
     cancelTxt?: string | false;
     confirmTxt?: string | false;
@@ -21,17 +21,13 @@ interface PopupProps {
     isNoFooter?: boolean;
     onCancelEvt?: () => void;
     onConfirmEvt?: () => void;
-    intialAni?: any;
-    animateAni?: any;
-    exitAni?: any;
 }
 
 export default function Popup({
     id,
-    className = 'popup',
+    name = 'popup',
+    className,
     title,
-    isOpen,
-    setOpen,
     children,
     cancelTxt = '취소',
     confirmTxt = '확인',
@@ -39,81 +35,85 @@ export default function Popup({
     isNoFooter,
     onCancelEvt,
     onConfirmEvt,
-    intialAni,
-    animateAni,
-    exitAni,
 }: PopupProps) {
-    const { onClose } = useLayerPopup(isOpen, setOpen);
+    const { popupList } = usePopupContext();
+    const [isOpen, setOpen] = useState(false);
+
+    useEffect(() => {
+        console.log(id);
+        popupList.includes(id) ? setOpen(true) : setOpen(false);
+    }, [popupList]);
+    const { onClose } = useLayerPopup();
 
     const handleCancelEvt = () => {
         onCancelEvt && onCancelEvt();
-        onClose();
+        onClose(id);
     };
 
     const handleConfirmEvt = () => {
         onConfirmEvt && onConfirmEvt();
-        onClose();
+        onClose(id);
     };
 
     return (
-        <div className={cn(`${className}__wrap`)}>
-            <div className={cn(`${className}__head`)}>
-                {title && (
-                    <span className={cn(`${className}__title`)}>{title}</span>
-                )}
-                <button
-                    className={cn(`${className}__btn`)}
-                    onClick={() => {
-                        onClose();
-                    }}
+        <AnimatePresence>
+            {isOpen && (
+                <motion.div
+                    initial={{ opacity: 0 }}
+                    animate={{ opacity: 1 }}
+                    exit={{ opacity: 0 }}
+                    className={cn(`${name}`, className)}
                 >
-                    <Icon icoName="ico-close--333" blindTxt="전체닫기" />
-                </button>
-            </div>
-            {children && (
-                <div className={cn(`${className}__body`)}>{children}</div>
-            )}
+                    <div className={cn(`${name}__wrap`)}>
+                        <div className={cn(`${name}__head`)}>
+                            {title && (
+                                <span className={cn(`${name}__title`)}>
+                                    {title}
+                                </span>
+                            )}
+                            <button
+                                className={cn(`${name}__btn`)}
+                                onClick={() => {
+                                    onClose(id);
+                                }}
+                            >
+                                <CloseIcon />
+                            </button>
+                        </div>
+                        {children && (
+                            <div className={cn(`${name}__body`)}>
+                                {children}
+                            </div>
+                        )}
 
-            {!isNoFooter && (
-                <div className={cn(`${className}__foot`)}>
-                    {customFoot ? (
-                        customFoot
-                    ) : (
-                        <>
-                            {cancelTxt && (
-                                <Button onClickEvt={handleCancelEvt}>
-                                    {cancelTxt}
-                                </Button>
-                            )}
-                            {confirmTxt && (
-                                <Button
-                                    type="blue"
-                                    onClickEvt={handleConfirmEvt}
-                                >
-                                    {confirmTxt}
-                                </Button>
-                            )}
-                        </>
-                    )}
-                </div>
+                        {!isNoFooter && (
+                            <div className={cn(`${name}__foot`)}>
+                                {customFoot ? (
+                                    customFoot
+                                ) : (
+                                    <>
+                                        {cancelTxt && (
+                                            <Button
+                                                onClickEvt={handleCancelEvt}
+                                            >
+                                                {cancelTxt}
+                                            </Button>
+                                        )}
+                                        {confirmTxt && (
+                                            <Button
+                                                type="blue"
+                                                onClickEvt={handleConfirmEvt}
+                                            >
+                                                {confirmTxt}
+                                            </Button>
+                                        )}
+                                    </>
+                                )}
+                            </div>
+                        )}
+                    </div>
+                </motion.div>
             )}
-        </div>
-        // <AnimatePresence>
-        //     {isOpen && (
-        //         <motion.div
-        //             className={cn(`${className}`)}
-        //             id={id}
-        //             key={id}
-        //             initial={intialAni ? intialAni : { opacity: 0 }}
-        //             animate={animateAni ? animateAni : { opacity: 1 }}
-        //             exit={exitAni ? exitAni : { opacity: 0 }}
-        //             transition={{ duration: 0.3 }}
-        //         >
-        //             <
-        //         </motion.div>
-        //     )}
-        // </AnimatePresence>
-        // ,
-        // document.getElementById('popup-root')!,
+        </AnimatePresence>
     );
 }

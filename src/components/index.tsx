@@ -9,6 +9,7 @@ export { SelectBox } from '@/components/SelectBox';
 export { Stepper } from '@/components/Stepper';
 export { Slide } from '@/components/Slide';
 export { Popup } from '@/components/Popup';
+export { LayerPopup } from '@/components/LayerPopup';
 export { Progress } from '@/components/Progress';
 export { DigitalWallet } from '@/components/DigitalWallet';
 export { Accordion } from '@/components/Accordion';

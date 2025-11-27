@@ -5,7 +5,7 @@ import { Guide, AccordionGuide } from '@/guide';
 
 export default function AccordionGuidepage() {
     return (
-        <Guide title="디지털월렛 컴포넌트">
+        <Guide title="아코디언 컴포넌트">
             <AccordionGuide />
         </Guide>
     );

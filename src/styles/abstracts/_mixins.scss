@@ -85,18 +85,15 @@ $icon-path: '../img/icons/';
 
 /* NotoSans */
 @mixin noto--12($weight: 500) {
-    font-family: var.$font-noto;
     font-weight: $weight;
     font-size: 1.2rem;
     line-height: 1.775rem;
 }
 @mixin noto--10($weight: 500) {
-    font-family: var.$font-noto;
     font-weight: $weight;
     font-size: 1rem;
 }
 @mixin noto--14($weight: 400) {
-    font-family: var.$font-noto;
     font-weight: $weight;
     font-size: 1.4rem;
     line-height: 2rem;

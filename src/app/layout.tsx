@@ -1,4 +1,8 @@
 import type { Metadata } from 'next';
+import cn from 'classnames';
+import { PopupProvider } from '@/context';
+import { PopupRoot } from '@/layout';
+
 import '@/styles/style.scss';
 
 export const metadata: Metadata = {
@@ -14,8 +18,11 @@ export default function RootLayout({
     return (
         <html lang="ko">
             <body>
-                <div className="container">{children}</div>
-                {/* <div id="popup-root" /> */}
+                <PopupProvider>
+                    <div className="container">{children}</div>
+
+                    <PopupRoot />
+                </PopupProvider>
             </body>
         </html>
     );

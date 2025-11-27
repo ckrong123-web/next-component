@@ -21,6 +21,13 @@
             "@/*": ["./src/*"]
         }
     },
-    "include": ["next-env.d.ts", "**/*.ts", "**/*.tsx", ".next/types/**/*.ts"],
+    "include": [
+        "next-env.d.ts",
+        "**/*.ts",
+        "**/*.tsx",
+        ".next/types/**/*.ts",
+        "src/hook/*.ts"
+        // "src/hook/useLayerPopup.js"
+    ],
     "exclude": ["node_modules"]
 }
