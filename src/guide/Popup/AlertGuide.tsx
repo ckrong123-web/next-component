@@ -23,7 +23,7 @@ export default function AlertGuide() {
                                 onOpen('alert_001');
                             }}
                         >
-                            팝업1 오픈
+                            alert1 오픈
                         </Button>
 
                         <Button
@@ -32,7 +32,7 @@ export default function AlertGuide() {
                                 onOpen('alert_002');
                             }}
                         >
-                            팝업2 오픈
+                            alert2 오픈
                         </Button>
 
                         <Button
@@ -41,7 +41,7 @@ export default function AlertGuide() {
                                 onOpen('alert_003');
                             }}
                         >
-                            팝업3 오픈
+                            alert3 오픈
                         </Button>
                     </div>
                 </div>
@@ -50,7 +50,9 @@ export default function AlertGuide() {
                 Lorem Ipsum is simply dummy text of the printing and typesetting
                 industry.
             </Alert>
-            <Alert id="alert_002">타이틀이 없는 Alert</Alert>
+            <Alert isNoTitle id="alert_002">
+                타이틀이 없는 Alert
+            </Alert>
             <Alert
                 title="alert 3"
                 id="alert_003"

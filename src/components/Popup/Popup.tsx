@@ -16,8 +16,10 @@ interface PopupProps {
     cancelTxt?: string | false;
     confirmTxt?: string | false;
     customFoot?: ReactNode;
+    isNoTitle?: boolean;
     isNoFooter?: boolean;
     isNoHeadBtn?: boolean;
+    customHeadBtn?: ReactNode;
     autoClose?: boolean | number;
     closeEvt: () => void;
     onCancelEvt?: () => void;
@@ -34,19 +36,25 @@ export default function Popup({
     confirmTxt = '확인',
     customFoot,
     isNoFooter,
+    isNoTitle,
     isNoHeadBtn,
+    customHeadBtn,
     autoClose,
     closeEvt,
     onCancelEvt,
     onConfirmEvt,
 }: PopupProps) {
-    const { popupList } = usePopupContext();
+    const { popupList, snackbarList } = usePopupContext();
     const [isOpen, setOpen] = useState(false);
 
     useEffect(() => {
-        console.log(id);
-        popupList.includes(id) ? setOpen(true) : setOpen(false);
-    }, [popupList]);
+        const inPopup = popupList.includes(id);
+        const inSnackbar = snackbarList.some((item) => item.clone === `${id}`);
+
+        setOpen(inPopup || inSnackbar);
+    }, [popupList, snackbarList]);
+
+    useEffect(() => {}, [snackbarList]);
 
     const handleCancelEvt = () => {
         onCancelEvt && onCancelEvt();
@@ -71,6 +79,7 @@ export default function Popup({
     useEffect(() => {
         timeRef.current && clearTimeout(timeRef.current);
     }, []);
+
     return (
         <AnimatePresence>
             {isOpen && (
@@ -82,25 +91,31 @@ export default function Popup({
                     onAnimationComplete={() => {
                         autoClose && handleAutoCloseEvt();
                     }}
+                    transition={{
+                        duration: 0.2,
+                    }}
                 >
                     <div className={cn(`${name}__wrap`)}>
-                        <div className={cn(`${name}__head`)}>
-                            {title && (
-                                <span className={cn(`${name}__title`)}>
-                                    {title}
-                                </span>
-                            )}
-                            {!isNoHeadBtn && (
-                                <button
-                                    className={cn(`${name}__btn`)}
-                                    onClick={() => {
-                                        closeEvt();
-                                    }}
-                                >
-                                    <CloseIcon />
-                                </button>
-                            )}
-                        </div>
+                        {!isNoTitle && (
+                            <div className={cn(`${name}__head`)}>
+                                {title && (
+                                    <span className={cn(`${name}__title`)}>
+                                        {title}
+                                    </span>
+                                )}
+                                {!isNoHeadBtn && !customHeadBtn && (
+                                    <button
+                                        className={cn(`${name}__btn`)}
+                                        onClick={() => {
+                                            closeEvt();
+                                        }}
+                                    >
+                                        <CloseIcon />
+                                    </button>
+                                )}
+                                {customHeadBtn && customHeadBtn}
+                            </div>
+                        )}
                         {children && (
                             <div className={cn(`${name}__body`)}>
                                 {children}

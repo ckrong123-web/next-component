@@ -1,6 +1,11 @@
 export { Guide } from '@/guide/Guide';
 
-export { PopupGuide, AlertGuide, LayerPopGuide } from '@/guide/Popup';
+export {
+    PopupGuide,
+    AlertGuide,
+    LayerPopGuide,
+    SnackbarGuide,
+} from '@/guide/Popup';
 export { AccordionGuide } from '@/guide/Accordion';
 export { ButtonGuide } from '@/guide/Button';
 export { InputGuide } from '@/guide/Input';

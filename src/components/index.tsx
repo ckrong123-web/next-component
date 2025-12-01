@@ -14,3 +14,4 @@ export { Progress } from '@/components/Progress';
 export { DigitalWallet } from '@/components/DigitalWallet';
 export { Accordion } from '@/components/Accordion';
 export { Alert } from '@/components/Alert';
+export { Snackbar } from '@/components/Snackbar';

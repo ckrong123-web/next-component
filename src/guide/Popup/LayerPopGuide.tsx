@@ -54,7 +54,8 @@ export default function LayerPopGuide() {
                         <br />
                         Props : id | name | className | title | children |
                         cancelTxt | confirmTxt | customFoot | isNoFooter |
-                        onCancelEvt | onConfirmEvt
+                        isNoTitle | isNoHeadBtn | customHeadBtn | autoClose |
+                        closeEvt | onCancelEvt | onConfirmEvt
                         <br />
                         id(string) 필수로 넘겨야 하는 값, 이 값으로 해당 팝업을
                         제어 할 수 있다.
@@ -73,6 +74,15 @@ export default function LayerPopGuide() {
                         customFoot 으로 foot 영역 커스텀 가능
                         <br />
                         isNoFooter 추가시 foot 영역 삭제
+                        <br />
+                        isNoTitle 추가시 타이틀 영역 삭제
+                        <br />
+                        isNoHeadBtn 추가시 헤드 영역 삭제
+                        <br />
+                        autoClose(boolean | number) 추가시 자동닫힘 / 숫자로
+                        넘길시 원하는 초 뒤에 닫히게 만들 수 있다. 기본은 3초
+                        <br />
+                        closeEvt 필수로 넘겨야 하는 값, 닫힘 이벤트를 넘겨줌
                         <br />
                         onCancelEvt 으로 이벤트 넘김 시 부정 버튼 클릭시
                         이벤트를 컴포넌트 밖에서 넘길 수 있음
