@@ -49,27 +49,24 @@ $icon-path: '../img/icons/';
 }
 
 @mixin scrollbars(
-    $size,
+    $size: 0.2rem,
     $foreground-color,
-    $background-color: mix($foreground-color, white, 50%)
+    $background-color: #6d8cbd
 ) {
     // For Google Chrome
     &::-webkit-scrollbar {
         width: $size;
-        height: $size;
+        border-left: 1px solid rgba(53, 65, 70, 0.045);
+        box-shadow: 0 0.7rem 1.2rem rgba(53, 65, 70, 0.03);
     }
 
     &::-webkit-scrollbar-thumb {
-        background: $foreground-color;
+        background: rgba($color: $background-color, $alpha: 0.4);
         border-radius: 10px;
-        background-clip: padding-box;
-        border: 1px solid transparent;
+        transition: 0.2s ease;
     }
-
-    &::-webkit-scrollbar-track {
-        background: $background-color;
-        // box-shadow: inset 0px 0px 5px white;
-        border-radius: 10px;
+    &::-webkit-scrollbar-thumb:hover {
+        background: rgba($color: $background-color, $alpha: 1);
     }
 }
 @mixin pseudo-element() {

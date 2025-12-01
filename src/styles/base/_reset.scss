@@ -120,6 +120,21 @@ body {
     letter-spacing: -0.05em;
     background: var.$color-white;
     color: #212529;
+
+    &::-webkit-scrollbar {
+        width: 0.2rem;
+        border-left: 1px solid rgba(53, 65, 70, 0.045);
+        box-shadow: 0 0.7rem 1.2rem rgba(53, 65, 70, 0.03);
+    }
+
+    &::-webkit-scrollbar-thumb {
+        background: rgba($color: #6d8cbd, $alpha: 0.4);
+        border-radius: 10px;
+        transition: 0.2s ease;
+    }
+    &::-webkit-scrollbar-thumb:hover {
+        background: rgba($color: #6d8cbd, $alpha: 1);
+    }
 }
 
 body * {

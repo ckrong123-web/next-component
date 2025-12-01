@@ -13,3 +13,4 @@ export { LayerPopup } from '@/components/LayerPopup';
 export { Progress } from '@/components/Progress';
 export { DigitalWallet } from '@/components/DigitalWallet';
 export { Accordion } from '@/components/Accordion';
+export { Alert } from '@/components/Alert';

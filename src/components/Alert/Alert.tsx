@@ -1,29 +1,31 @@
 import React, { ReactNode, useState, useEffect } from 'react';
 import { Popup } from '@/components';
 import { createPortal } from 'react-dom';
-import { useLayerPopup } from '@/hook/useLayerPopup';
+import { useAlert } from '@/hook/useAlert';
 
-interface LayerPopupProps {
+interface AlertProps {
     id: string;
     title?: string;
     children?: ReactNode;
     className?: string;
+    autoClose?: boolean | number;
     [key: string]: any;
 }
 
-export default function LayerPopup({
+export default function Alert({
     id,
     title,
     className,
     children,
+    autoClose,
     ...rest
-}: LayerPopupProps) {
+}: AlertProps) {
     const [popRoot, setPopRoot] = useState<HTMLElement | null>(null);
     useEffect(() => {
         setPopRoot(document.getElementById('popup-root'));
     }, []);
 
-    const { onClose } = useLayerPopup();
+    const { onClose } = useAlert();
 
     return (
         <>
@@ -32,8 +34,11 @@ export default function LayerPopup({
                       <Popup
                           title={title}
                           id={id}
-                          name="layer-popup"
+                          name="alert"
                           className={className}
+                          cancelTxt={false}
+                          autoClose={autoClose}
+                          isNoHeadBtn
                           {...rest}
                           closeEvt={() => {
                               onClose(id);

@@ -9,39 +9,29 @@
     height: 100vh;
     pointer-events: none;
 }
+
 .pop--dimm {
     z-index: 100;
     background-color: rgba(0, 0, 0, 0.3);
     pointer-events: all;
 }
 
-.layer-popup {
+@mixin pop-base() {
     top: 50%;
     left: 50%;
     position: absolute;
     transform: translate(-50%, -50%);
-    width: calc(100% - 3.2rem);
-    max-width: 80rem;
     z-index: 20;
     &__wrap {
         border-radius: 2.4rem;
         background-color: #fff;
         padding: 2.4rem;
-        max-height: 80vh;
         display: flex;
         flex-direction: column;
         border: 1px solid $gray-color-2;
         box-shadow: 0 0.7rem 1.2rem rgba(53, 65, 70, 0.2);
     }
 
-    &__head {
-        display: flex;
-        justify-content: flex-end;
-        align-items: center;
-        gap: 0.8rem;
-        margin-bottom: 1.8rem;
-        flex-shrink: 0;
-    }
     &__title {
         flex-shrink: 1;
         flex-grow: 1;
@@ -59,6 +49,12 @@
         overflow-y: auto;
         @include mix.noto--14();
     }
+    &__head {
+        display: flex;
+        align-items: center;
+        gap: 0.8rem;
+        margin-bottom: 1.8rem;
+    }
     &__foot {
         display: flex;
         justify-content: flex-start;
@@ -69,6 +65,31 @@
     }
 }
 
-// 레이어 팝업
-.layer-pop {
+// layer popup
+.layer-popup {
+    width: calc(100% - 3.2rem);
+    max-width: 80rem;
+
+    &__wrap {
+        max-height: 80vh;
+    }
+    &__head {
+        justify-content: flex-end;
+        flex-shrink: 0;
+    }
+    @include pop-base();
+}
+
+// alert
+.alert {
+    width: 40rem;
+    max-width: calc(100% - 3.2rem);
+    &__wrap {
+        justify-content: center;
+        align-items: center;
+    }
+    &__foot {
+        margin-top: 1.8rem;
+    }
+    @include pop-base();
 }

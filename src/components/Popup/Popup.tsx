@@ -1,4 +1,4 @@
-import React, { use, useEffect, useState, ReactNode } from 'react';
+import React, { useRef, useEffect, useState, ReactNode } from 'react';
 import cn from 'classnames';
 import { Button } from '@/components';
 import { CloseIcon } from '@/icon';
@@ -6,8 +6,6 @@ import { CloseIcon } from '@/icon';
 import { AnimatePresence, motion } from 'motion/react';
 
 import { usePopupContext } from '@/context/PopupProvider/PopupProvider';
-
-import { useLayerPopup } from '@/hook/useLayerPopup';
 
 interface PopupProps {
     id: string;
@@ -19,6 +17,9 @@ interface PopupProps {
     confirmTxt?: string | false;
     customFoot?: ReactNode;
     isNoFooter?: boolean;
+    isNoHeadBtn?: boolean;
+    autoClose?: boolean | number;
+    closeEvt: () => void;
     onCancelEvt?: () => void;
     onConfirmEvt?: () => void;
 }
@@ -33,6 +34,9 @@ export default function Popup({
     confirmTxt = '확인',
     customFoot,
     isNoFooter,
+    isNoHeadBtn,
+    autoClose,
+    closeEvt,
     onCancelEvt,
     onConfirmEvt,
 }: PopupProps) {
@@ -43,18 +47,30 @@ export default function Popup({
         console.log(id);
         popupList.includes(id) ? setOpen(true) : setOpen(false);
     }, [popupList]);
-    const { onClose } = useLayerPopup();
 
     const handleCancelEvt = () => {
         onCancelEvt && onCancelEvt();
-        onClose(id);
+        closeEvt();
     };
 
     const handleConfirmEvt = () => {
         onConfirmEvt && onConfirmEvt();
-        onClose(id);
+        closeEvt();
     };
 
+    const timeRef = useRef<NodeJS.Timeout | null>(null);
+    const time = typeof autoClose === 'number' ? autoClose : 3000;
+
+    const handleAutoCloseEvt = () => {
+        timeRef.current = setTimeout(() => {
+            closeEvt();
+            timeRef.current = null;
+        }, time);
+    };
+
+    useEffect(() => {
+        timeRef.current && clearTimeout(timeRef.current);
+    }, []);
     return (
         <AnimatePresence>
             {isOpen && (
@@ -63,6 +79,9 @@ export default function Popup({
                     animate={{ opacity: 1 }}
                     exit={{ opacity: 0 }}
                     className={cn(`${name}`, className)}
+                    onAnimationComplete={() => {
+                        autoClose && handleAutoCloseEvt();
+                    }}
                 >
                     <div className={cn(`${name}__wrap`)}>
                         <div className={cn(`${name}__head`)}>
@@ -71,14 +90,16 @@ export default function Popup({
                                     {title}
                                 </span>
                             )}
-                            <button
-                                className={cn(`${name}__btn`)}
-                                onClick={() => {
-                                    onClose(id);
-                                }}
-                            >
-                                <CloseIcon />
-                            </button>
+                            {!isNoHeadBtn && (
+                                <button
+                                    className={cn(`${name}__btn`)}
+                                    onClick={() => {
+                                        closeEvt();
+                                    }}
+                                >
+                                    <CloseIcon />
+                                </button>
+                            )}
                         </div>
                         {children && (
                             <div className={cn(`${name}__body`)}>
