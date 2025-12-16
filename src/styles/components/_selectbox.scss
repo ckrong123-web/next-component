@@ -28,33 +28,17 @@
             }
         }
         &__dropdown-indicator {
-            background: ico-arrowDown('333');
+            background-color: $gray-color-6;
+            mask: url(/img/icon/arrowdownicon.svg) center/contain no-repeat;
         }
         &__clear-indicator {
-            background: ico-close('333');
+            background-color: $gray-color-6;
+            mask: url(/img/icon/closeicon.svg) center/contain no-repeat;
             margin: 0 0.4rem;
             position: relative;
             transition: 0.15s ease;
-            &::after {
-                width: 1px;
-                height: 1.4rem;
-                background-color: $gray-color-2;
-                position: absolute;
-                top: 0.3rem;
-                left: -0.2rem;
-                @include mix.pseudo-element();
-            }
-            &::before {
-                width: 1px;
-                height: 1.4rem;
-                background-color: $gray-color-2;
-                position: absolute;
-                top: 0.3rem;
-                right: -0.2rem;
-                @include mix.pseudo-element();
-            }
             &:hover {
-                background: ico-close('ff3d3d');
+                background-color: $red-point-1;
             }
         }
         &__value-container {
@@ -117,10 +101,11 @@
             width: 1.6rem;
             height: 1.6rem;
             margin-left: 0.2rem;
-            background: ico-close('333');
+            background-color: $gray-color-6;
+            mask: url(/img/icon/closeicon.svg) center/contain no-repeat;
             transition: 0.15s ease;
             &:hover {
-                background: ico-close('ff3d3d');
+                background-color: $red-point-1;
             }
             > svg {
                 display: none;

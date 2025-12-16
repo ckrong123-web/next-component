@@ -8,7 +8,9 @@ const __dirname = path.dirname(__filename);
 const nextConfig = {
     reactStrictMode: false,
     sassOptions: {
-        includePaths: ['./src/styles', '*.scss'],
+        includePaths: [
+            path.join(__dirname, 'src/styles'),
+        ],
         sourceMap: true,
         prependData: `
                   @use "@/styles/abstracts/_variables.scss" as var;

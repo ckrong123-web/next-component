@@ -18,3 +18,5 @@ export { StepperGuide } from '@/guide/Stepper';
 export { ProgressGuide } from '@/guide/Progress';
 export { IconGuide } from '@/guide/Icon';
 export { DigitalWalletGuide } from '@/guide/DigitalWallet';
+export { BadgeGuide } from '@/guide/Badge';
+export { BreadcrumbGuide } from '@/guide/Breadcrumb';

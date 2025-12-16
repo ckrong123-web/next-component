@@ -1,4 +1,6 @@
 export { Button, AccoButton, IconButton } from '@/components/Button';
+export { Badge } from '@/components/Badge';
+export { Breadcrumb } from '@/components/Breadcrumb';
 export { Icon } from '@/components/Icon';
 export { Input } from '@/components/Input';
 export { Tooltip } from '@/components/Tooltip';

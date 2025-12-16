@@ -2,7 +2,6 @@
 
 import React from 'react';
 import { Guide, PopupGuide } from '@/guide';
-import Link from 'next/link';
 
 export default function ButtonGuidePage() {
     return (

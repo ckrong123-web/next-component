@@ -1,0 +1,40 @@
+.breadcrumb {
+    &__list {
+        display: flex;
+        align-items: center;
+    }
+    &__item {
+        display: inline-flex;
+        align-items: center;
+        font-weight: 400;
+        font-size: 1.4rem;
+        line-height: 2rem;
+        color: $gray-color-6;
+        transition: 0.3s ease;
+
+        svg {
+            transition: 0.3s ease;
+        }
+
+        &::before {
+            content: '/';
+            margin: 0 1rem;
+            font-size: 1rem;
+            font-weight: 300;
+            color: $gray-color-3;
+        }
+        &:first-of-type::before {
+            content: none;
+        }
+        &:hover {
+            color: $blue-color-2;
+            svg {
+                color: $blue-color-2 !important;
+            }
+        }
+    }
+    &__home {
+        width: 1.8rem;
+        height: 1.8rem;
+    }
+}

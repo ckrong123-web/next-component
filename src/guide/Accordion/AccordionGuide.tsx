@@ -25,13 +25,8 @@ export default function AccordionGuide() {
                         서브컴포넌트 : Accordion.Item (Props : index | isOpen |
                         title | children)
                         <br />
-                        isMulti 추가시 여러개 동시 오픈 가능 / 기본값은 false
-                        <br />
                         Accordion.Item Props index, 부모에서 자동으로 자식들
                         중에서 순번을 세겨 넘기므로 지정해도 의미없음
-                        <br />
-                        Accordion.Item Props isOpen, 맨처음 default 상태를
-                        열림상태로 시작
                         <br />
                         Accordion.Item Props title, 버튼 왼쪽으로 타이틀
                         텍스트를 지정할 수 있음
@@ -50,6 +45,12 @@ export default function AccordionGuide() {
                             보여요 2번
                         </Accordion.Item>
                     </Accordion>
+                    <div className="guide__desc">
+                        isMulti 추가시 여러개 동시 오픈 가능 / 기본값은 false
+                        <br />
+                        Accordion.Item Props isOpen, 맨처음 default 상태를
+                        열림상태로 시작
+                    </div>
                 </div>
             </div>
         </div>

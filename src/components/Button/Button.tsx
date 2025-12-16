@@ -7,6 +7,7 @@ interface ButtonProps {
     type?: 'blue' | 'gray' | 'darkGray';
     disable?: boolean;
     onClickEvt?: () => void;
+    [key: string]: any;
 }
 
 export default function Button({
@@ -15,6 +16,7 @@ export default function Button({
     href,
     disable = false,
     onClickEvt,
+    ...rest
 }: ButtonProps) {
     const contents = (
         <span

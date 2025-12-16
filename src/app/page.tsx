@@ -16,22 +16,26 @@ import {
     IconGuide,
     DigitalWalletGuide,
     AccordionGuide,
+    BadgeGuide,
+    BreadcrumbGuide,
 } from '@/guide';
 
 const listData = [
-    { compnent: 'Popup', guide: <PopupGuide /> },
-    { compnent: 'Button', guide: <ButtonGuide /> },
-    { compnent: 'Input', guide: <InputGuide /> },
-    { compnent: 'Tab', guide: <TabGuide /> },
-    { compnent: 'Radio', guide: <RadioGuide /> },
-    { compnent: 'Slider', guide: <SliderGuide /> },
-    { compnent: 'SelectBox', guide: <SelectBoxGuide /> },
-    { compnent: 'Swiper', name: 'Slide (swiper)', guide: <SwiperGuide /> },
-    { compnent: 'Stepper', guide: <StepperGuide /> },
-    { compnent: 'Progress', guide: <ProgressGuide /> },
-    { compnent: 'Icon', guide: <IconGuide /> },
-    { compnent: 'DigitalWallet', guide: <DigitalWalletGuide /> },
     { compnent: 'Accordion', guide: <AccordionGuide /> },
+    { compnent: 'Badge', guide: <BadgeGuide /> },
+    { compnent: 'Breadcrumb', guide: <BreadcrumbGuide /> },
+    { compnent: 'Button', guide: <ButtonGuide /> },
+    { compnent: 'DigitalWallet', guide: <DigitalWalletGuide /> },
+    { compnent: 'Icon', guide: <IconGuide /> },
+    { compnent: 'Input', guide: <InputGuide /> },
+    { compnent: 'Popup', guide: <PopupGuide /> },
+    { compnent: 'Progress', guide: <ProgressGuide /> },
+    { compnent: 'Radio', guide: <RadioGuide /> },
+    { compnent: 'SelectBox', guide: <SelectBoxGuide /> },
+    { compnent: 'Slider', guide: <SliderGuide /> },
+    { compnent: 'Stepper', guide: <StepperGuide /> },
+    { compnent: 'Swiper', name: 'Slide (swiper)', guide: <SwiperGuide /> },
+    { compnent: 'Tab', guide: <TabGuide /> },
 ];
 
 export default function page() {
