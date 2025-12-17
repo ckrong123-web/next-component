@@ -42,7 +42,8 @@ export default function DigitalWalletGuideGuide() {
                     </DigitalWallet>
 
                     <div className="guide__desc">
-                        컴포넌트명 : DigitalWallet Props: children |
+                        컴포넌트명 : DigitalWallet
+                        <br /> Props: children
                         <br />
                         서브컴포넌트 : DigitalWallet.Item (Props : index | tit |
                         txt | href | background | onClickEvt)

@@ -1,6 +1,8 @@
 import React, { useState } from 'react';
 import cn from 'classnames';
 
+import { CloseIcon, SearchIcon } from '@/icon';
+
 interface InputProps {
     defaultValue?: string;
     placeholder?: string;
@@ -8,6 +10,8 @@ interface InputProps {
     readOnly?: boolean;
     error?: boolean;
     number?: boolean;
+    isSearch?: boolean;
+    hasDelete?: boolean;
     className?: string;
     [key: string]: any;
 }
@@ -19,10 +23,13 @@ export default function Input({
     readOnly,
     error,
     number,
+    isSearch,
+    hasDelete = true,
     className,
     ...rest
 }: InputProps) {
     const [isFocus, setIsFocus] = useState(false);
+    const [value, setValue] = useState(defaultValue ? defaultValue : '');
 
     return (
         <div className={(cn('input'), className)}>
@@ -33,6 +40,7 @@ export default function Input({
                     'input--focus': isFocus,
                     'input--error': error,
                     'input--number': number,
+                    'input--search': isSearch,
                 })}
             >
                 <input
@@ -49,7 +57,28 @@ export default function Input({
                     }}
                     type={number ? 'number' : 'text'}
                     {...rest}
+                    value={value}
+                    onChange={(e) => {
+                        setValue(e.target.value);
+                    }}
                 />
+                {value && hasDelete && (
+                    <button
+                        className="input__btn"
+                        onClick={() => {
+                            setValue('');
+                        }}
+                    >
+                        <CloseIcon />
+                        <span className="blind">삭제</span>
+                    </button>
+                )}
+                {isSearch && (
+                    <button className="input__btn">
+                        <SearchIcon />
+                        <span className="blind">검색</span>
+                    </button>
+                )}
             </div>
             {error && (
                 <span className="input__errorMessage">

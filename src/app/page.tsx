@@ -18,6 +18,8 @@ import {
     AccordionGuide,
     BadgeGuide,
     BreadcrumbGuide,
+    CheckboxGuide,
+    ChipGuide,
 } from '@/guide';
 
 const listData = [
@@ -25,6 +27,8 @@ const listData = [
     { compnent: 'Badge', guide: <BadgeGuide /> },
     { compnent: 'Breadcrumb', guide: <BreadcrumbGuide /> },
     { compnent: 'Button', guide: <ButtonGuide /> },
+    { compnent: 'Checkbox', guide: <CheckboxGuide /> },
+    { compnent: 'Chip', guide: <ChipGuide /> },
     { compnent: 'DigitalWallet', guide: <DigitalWalletGuide /> },
     { compnent: 'Icon', guide: <IconGuide /> },
     { compnent: 'Input', guide: <InputGuide /> },

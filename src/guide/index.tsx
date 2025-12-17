@@ -20,3 +20,5 @@ export { IconGuide } from '@/guide/Icon';
 export { DigitalWalletGuide } from '@/guide/DigitalWallet';
 export { BadgeGuide } from '@/guide/Badge';
 export { BreadcrumbGuide } from '@/guide/Breadcrumb';
+export { CheckboxGuide } from '@/guide/Checkbox';
+export { ChipGuide } from '@/guide/Chip';

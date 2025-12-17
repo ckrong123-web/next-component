@@ -20,7 +20,8 @@ export default function AccordionGuide() {
                         </Accordion.Item>
                     </Accordion>
                     <div className="guide__desc">
-                        컴포넌트명 : Accordion Props: isMulti | children
+                        컴포넌트명 : Accordion
+                        <br /> Props: isMulti | children
                         <br />
                         서브컴포넌트 : Accordion.Item (Props : index | isOpen |
                         title | children)

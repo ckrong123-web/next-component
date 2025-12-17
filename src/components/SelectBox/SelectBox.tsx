@@ -1,6 +1,5 @@
 import React from 'react';
-import Select, { components } from 'react-select';
-import { ArrowDownIcon, CloseIcon } from '@/icon';
+import Select from 'react-select';
 
 interface SelectOption {
     value: string;
@@ -19,14 +18,6 @@ export default function SelectBox({
     placeholder = '값을 선택해주세요.',
     ...rest
 }: SelectProps) {
-    const CustomMultiValueRemove = (props: any) => {
-        return (
-            <components.MultiValueRemove {...props}>
-                <CloseIcon /> {/* 원하는 아이콘으로 교체 */}
-            </components.MultiValueRemove>
-        );
-    };
-
     return (
         <>
             <div className="selectbox">

@@ -1,6 +1,7 @@
 export { Button, AccoButton, IconButton } from '@/components/Button';
 export { Badge } from '@/components/Badge';
 export { Breadcrumb } from '@/components/Breadcrumb';
+export { Checkbox } from '@/components/Checkbox';
 export { Icon } from '@/components/Icon';
 export { Input } from '@/components/Input';
 export { Tooltip } from '@/components/Tooltip';
@@ -17,3 +18,4 @@ export { DigitalWallet } from '@/components/DigitalWallet';
 export { Accordion } from '@/components/Accordion';
 export { Alert } from '@/components/Alert';
 export { Snackbar } from '@/components/Snackbar';
+export { Chip } from '@/components/Chip';

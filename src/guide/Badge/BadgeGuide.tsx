@@ -5,7 +5,7 @@ export default function BadgeGuide() {
     return (
         <>
             <div className="guide__box">
-                <strong className="guide__head">뱃지 컴포넌트</strong>
+                <strong className="guide__head">Badge</strong>
                 <div className="guide__boxWrap">
                     <span className="guide__boxName">기본</span>
                     <div className="guide__boxBody">
@@ -23,7 +23,8 @@ export default function BadgeGuide() {
                             <Badge color="purple">뱃지 purple</Badge>
                         </div>
                         <div className="guide__desc">
-                            컴포넌트명 : Badge Props: color
+                            컴포넌트명 : Badge
+                            <br /> Props: color
                             <span>
                                 ('default','black','red','blue','purple')
                             </span>{' '}

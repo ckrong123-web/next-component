@@ -5,7 +5,7 @@ export default function InputGuide() {
     return (
         <>
             <div className="guide__box">
-                <strong className="guide__head">INPUT</strong>
+                <strong className="guide__head">Input</strong>
                 <div className="guide__boxWrap">
                     <span className="guide__boxName">기본</span>
                     <div className="guide__boxBody">
@@ -90,6 +90,19 @@ export default function InputGuide() {
                             <Input name="InputName07" number />
                         </div>
                         <div className="guide__desc">Props : number</div>
+                    </div>
+                    <span className="guide__boxName">검색 (search)</span>
+                    <div className="guide__boxBody">
+                        <div
+                            style={{
+                                display: 'flex',
+                                flexDirection: 'column',
+                                gap: '0.45rem',
+                            }}
+                        >
+                            <Input name="InputName08" isSearch />
+                        </div>
+                        <div className="guide__desc">Props : isSearch</div>
                     </div>
                 </div>
             </div>

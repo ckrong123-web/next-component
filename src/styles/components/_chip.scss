@@ -1,0 +1,43 @@
+.chip {
+    display: inline-block;
+    &--img {
+        .chip__wrap {
+            padding-left: 0.8rem;
+        }
+    }
+    &__wrap {
+        display: inline-flex;
+        min-height: 3rem;
+        align-items: center;
+        padding: 0.5rem 1.2rem;
+        border-radius: 10rem;
+        gap: 0.4rem;
+        background-color: $gray-color-3;
+    }
+    &__img {
+        width: 2rem;
+        height: 2rem;
+        border-radius: 50%;
+        overflow: hidden;
+
+        img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+    }
+    &__icon {
+        width: 2rem;
+        height: 2rem;
+    }
+    &__txt {
+        font-weight: 400;
+        font-size: 1.3rem;
+        color: $gray-color-6;
+    }
+    &__btn {
+        width: 2rem;
+        height: 2rem;
+        color: $gray-color-6;
+    }
+}

@@ -1,0 +1,40 @@
+.checkbox {
+    display: inline-block;
+    &__wrap {
+        display: inline-flex;
+        align-items: center;
+        gap: 0.4rem;
+    }
+    &__input {
+        width: 1.8rem;
+        height: 1.8rem;
+        border: 1px solid $gray-color-3;
+        box-sizing: border-box;
+        border-radius: 0.4rem;
+        position: relative;
+        transition: 0.2s ease;
+
+        &:checked {
+            border-color: $blue-point-1;
+            background-color: $blue-point-1;
+            &::after {
+                content: '';
+                width: calc(100% - 0.3rem);
+                height: calc(100% - 0.3rem);
+                position: absolute;
+                top: 50%;
+                left: 50%;
+                transform: translate(-50%, -50%);
+                background-color: $white-color-1;
+                mask: url(/img/icon/checkicon.svg) center/contain no-repeat;
+            }
+        }
+        &:disabled {
+            background-color: $gray-color-3;
+            &:checked {
+                background-color: $gray-color-4;
+                border-color: $gray-color-4;
+            }
+        }
+    }
+}

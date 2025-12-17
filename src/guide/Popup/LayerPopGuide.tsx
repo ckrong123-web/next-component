@@ -10,7 +10,7 @@ export default function LayerPopGuide() {
     return (
         <>
             <div className="guide__box">
-                <strong className="guide__head">LAYER POPUP</strong>
+                <strong className="guide__head">Layer Popup</strong>
                 <div className="guide__boxWrap guide__boxWrap--solid">
                     <div
                         style={{
@@ -40,7 +40,7 @@ export default function LayerPopGuide() {
                     <br />
                     <div className="guide__desc">
                         컴포넌트명 : LayerPoup <br />
-                        Props : id | title | className | children
+                        Props : id | title | className | children | ...rest
                         <br />
                         Props id(string) 필수로 넘겨야 하는 값, 이 값으로 해당
                         팝업을 제어 할 수 있다.
@@ -78,6 +78,8 @@ export default function LayerPopGuide() {
                         isNoTitle 추가시 타이틀 영역 삭제
                         <br />
                         isNoHeadBtn 추가시 헤드 영역 삭제
+                        <br />
+                        customHeadBtn 으로 headBtn 영역 커스텀 가능
                         <br />
                         autoClose(boolean | number) 추가시 자동닫힘 / 숫자로
                         넘길시 원하는 초 뒤에 닫히게 만들 수 있다. 기본은 3초

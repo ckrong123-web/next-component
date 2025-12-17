@@ -15,7 +15,7 @@ export default function ButtonGuide() {
     return (
         <>
             <div className="guide__box">
-                <strong className="guide__head">텍스트 버튼 컴포넌트</strong>
+                <strong className="guide__head">Text Button</strong>
                 <div className="guide__boxWrap">
                     <span className="guide__boxName">기본</span>
                     <div className="guide__boxBody">
@@ -103,7 +103,7 @@ export default function ButtonGuide() {
                 </div>
             </div>
             <div className="guide__box">
-                <strong className="guide__head">아이콘 버튼 컴포넌트</strong>
+                <strong className="guide__head">Icon Button</strong>
                 <div className="guide__boxWrap">
                     <span className="guide__boxName">기본</span>
                     <div className="guide__boxBody">
@@ -157,7 +157,7 @@ export default function ButtonGuide() {
                 </div>
             </div>
             <div className="guide__box">
-                <strong className="guide__head">아코디언 버튼 컴포넌트</strong>
+                <strong className="guide__head">Accordion Button</strong>
                 <div className="guide__boxWrap">
                     <span className="guide__boxName">기본</span>
                     <div className="guide__boxBody">
