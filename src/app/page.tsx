@@ -20,6 +20,7 @@ import {
     BreadcrumbGuide,
     CheckboxGuide,
     ChipGuide,
+    DatepickerGuide,
 } from '@/guide';
 
 const listData = [
@@ -29,6 +30,7 @@ const listData = [
     { compnent: 'Button', guide: <ButtonGuide /> },
     { compnent: 'Checkbox', guide: <CheckboxGuide /> },
     { compnent: 'Chip', guide: <ChipGuide /> },
+    { compnent: 'Datepicker', guide: <DatepickerGuide /> },
     { compnent: 'DigitalWallet', guide: <DigitalWalletGuide /> },
     { compnent: 'Icon', guide: <IconGuide /> },
     { compnent: 'Input', guide: <InputGuide /> },

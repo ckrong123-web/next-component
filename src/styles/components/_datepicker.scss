@@ -1,0 +1,140 @@
+.datepicker {
+    &__wrap {
+        width: 100%;
+        position: relative;
+        .react-datepicker-wrapper {
+            width: 100%;
+        }
+    }
+    &__input {
+        width: 100%;
+    }
+
+    .react-datepicker {
+        border-color: $gray-color-3;
+        border-radius: 0.8rem;
+        overflow: hidden;
+        &-popper {
+            top: auto !important;
+            bottom: 0 !important;
+            transform: translate(1rem, calc(100% + 1.5rem)) !important;
+            box-shadow: 0 0.7rem 1.2rem rgba(53, 65, 70, 0.2);
+            border-radius: 0.8rem;
+        }
+        &__triangle {
+            fill: $white-color-1 !important;
+            stroke: $gray-color-3 !important;
+        }
+        &__navigation {
+            top: 0.3rem;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            width: 3.4rem;
+            height: 3.4rem;
+
+            span::before {
+                content: none;
+            }
+        }
+        &__navigation--previous {
+            left: 0.8rem;
+        }
+        &__navigation--next {
+            right: 0.8rem;
+        }
+        &__navigation-icon {
+            width: 2.6rem;
+            height: 2.6rem;
+            position: absolute;
+            top: 0.4rem;
+            border-radius: 0.4rem;
+            transition: 0.2s ease;
+            &::after {
+                content: '';
+                display: block;
+                width: calc(100% - 0.4rem);
+                height: calc(100% - 0.4rem);
+                position: absolute;
+                top: 0.2rem;
+                left: 0.2rem;
+                background-color: $blue-color-3;
+                transition: 0.2s ease;
+            }
+            &:hover {
+                background-color: $blue-color-4;
+                &::after {
+                    background-color: $blue-point-1;
+                }
+            }
+        }
+        &__navigation-icon--next {
+            left: 0.4rem;
+            &::after {
+                mask: url(/img/icon/arrowrighticon.svg) center/contain no-repeat;
+            }
+        }
+        &__navigation-icon--previous {
+            left: 0.4rem;
+            &::after {
+                right: 0.2rem;
+                mask: url(/img/icon/arrowlefticon.svg) center/contain no-repeat;
+            }
+        }
+        &__day-name,
+        &__day,
+        &__time-name {
+            width: 3rem;
+            height: 3rem;
+            color: $gray-color-6;
+            font-size: 1.4rem;
+            font-weight: 400;
+            line-height: 3rem;
+            margin: 0.2rem;
+        }
+        &__day-name {
+            font-weight: 600;
+            color: $blue-color-3;
+        }
+        &__day {
+            transition: 0.2s ease;
+            &:not([aria-disabled='true']):hover {
+                border-radius: 0.4rem;
+                background-color: $blue-color-4;
+            }
+            &--keyboard-selected {
+                background-color: $blue-color-4;
+                color: $blue-point-1;
+                font-weight: 600;
+                &:not([aria-disabled='true']):hover {
+                    background-color: $blue-point-1;
+                    color: $white-color-1;
+                }
+            }
+            &--outside-month {
+                opacity: 0.4;
+            }
+        }
+        &__day-names {
+            margin-bottom: -0.4rem;
+            padding: 0.2rem 0 0.4rem;
+            background-color: #edf2f9;
+        }
+        &__month {
+            margin: 1rem 0.8rem 0.8rem;
+        }
+        &__header {
+            border-radius: 0.4rem 0.4rem 0 0;
+            padding: 1rem 0.8rem;
+            border-color: $gray-color-3;
+            background-color: $white-color-1;
+        }
+        &__current-month {
+            font-weight: 500;
+            color: $gray-color-5;
+            font-size: 1.3rem;
+            letter-spacing: -0.02em;
+            line-height: 1.6;
+        }
+    }
+}

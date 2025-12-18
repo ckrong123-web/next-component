@@ -19,3 +19,4 @@ export { Accordion } from '@/components/Accordion';
 export { Alert } from '@/components/Alert';
 export { Snackbar } from '@/components/Snackbar';
 export { Chip } from '@/components/Chip';
+export { Datepicker } from '@/components/Datepicker';

@@ -32,7 +32,7 @@ export default function Input({
     const [value, setValue] = useState(defaultValue ? defaultValue : '');
 
     return (
-        <div className={(cn('input'), className)}>
+        <div className={cn('input', className)}>
             <div
                 className={cn('input__wrap', {
                     'input--disabled': disabled,
