@@ -1,0 +1,92 @@
+.floatBtn {
+    width: fit-content;
+    position: fixed;
+    bottom: 0;
+    right: 0;
+    &__wrap {
+        position: relative;
+        display: flex;
+        flex-direction: column;
+    }
+    &__list {
+        display: flex;
+        flex-direction: column;
+        margin-bottom: 1rem;
+        gap: 1rem;
+    }
+    &__item {
+        position: relative;
+        transition: 0.4s ease;
+
+        @for $i from 1 through 10 {
+            &:nth-last-of-type(#{$i}) {
+                transform: translateY(#{$i * 5.4}rem);
+            }
+        }
+    }
+    &__btn {
+        width: 4.4rem;
+        height: 4.4rem;
+        border-radius: 50%;
+        background-color: $blue-color-2;
+        padding: 0.6rem;
+        transform: rotate(225deg);
+        transition: 0.3s ease;
+
+        .icon svg {
+            color: $white-color-1 !important;
+        }
+
+        &--open {
+            transform: rotate(0);
+        }
+
+        &:hover {
+            background-color: $blue-color-3;
+        }
+    }
+
+    &--open {
+        .floatBtn__item {
+            transform: translateY(0);
+        }
+    }
+}
+
+.floatBtn-item {
+    display: block;
+    width: 4.4rem;
+    height: 4.4rem;
+    border-radius: 50%;
+    border: 1px solid $gray-color-3;
+    padding: 0.7rem;
+    opacity: 0.6;
+    transition: 0.2s ease;
+    background-color: $white-color-1;
+    &__wrap {
+        position: relative;
+    }
+    &__txt {
+        position: absolute;
+        top: 50%;
+        left: -2.2rem;
+        width: max-content;
+        transform: translate(-100%, -50%);
+        opacity: 0;
+        transition: 0.3s ease;
+        font-weight: 400;
+        font-size: 1.3rem;
+        color: $gray-color-5;
+    }
+    svg {
+        color: $gray-color-6 !important;
+    }
+
+    &:hover {
+        opacity: 1;
+        box-shadow: 0 0 0.5rem 0.5rem rgba(0, 0, 0, 0.06);
+        .floatBtn-item__txt {
+            opacity: 1;
+        }
+    }
+}

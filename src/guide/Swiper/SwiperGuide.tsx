@@ -28,19 +28,19 @@ export default function SwiperGuide() {
                             );
                         })}
                     </Slide>
-                    {/* 
+
                     <div className="guide__desc">
-                        컴포넌트명 : Slider Props: range | min | max
+                        컴포넌트명 : Slide Props: nav | pagin | navOnly |
+                        progress | className | children | ...rest <br />
+                        Props nav (boolean / 기본 : true) true 시 네비게이션
+                        추가
                         <br />
-                        Props range 추가시 범위(최소 ~ 최대) 옵션
+                        Props pagin (boolean / 기본 : true) true 시 페이징 추가
                         <br />
-                        Props tooltip 추가시 툴팁 생성
+                        Props pagin (boolean / 기본 : true) true 시 페이징 추가
                         <br />
-                        Props min( number ) 추가시 최소값 설정
-                        <br />
-                        Props max ( number ) 추가시 최대값 설정
-                        <br />
-                        이외 props는 ...rest로 넘어감 */}
+                        이외 props는 ...rest로 넘어감
+                    </div>
                 </div>
             </div>
         </div>

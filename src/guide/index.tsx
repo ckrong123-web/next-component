@@ -23,3 +23,5 @@ export { BreadcrumbGuide } from '@/guide/Breadcrumb';
 export { CheckboxGuide } from '@/guide/Checkbox';
 export { ChipGuide } from '@/guide/Chip';
 export { DatepickerGuide } from '@/guide/Datepicker';
+export { NodataGuide } from '@/guide/Nodata';
+export { FloatBtnGuide } from '@/guide/FloatBtn';

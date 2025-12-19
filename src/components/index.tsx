@@ -20,3 +20,5 @@ export { Alert } from '@/components/Alert';
 export { Snackbar } from '@/components/Snackbar';
 export { Chip } from '@/components/Chip';
 export { Datepicker } from '@/components/Datepicker';
+export { Nodata } from '@/components/Nodata';
+export { FloatBtn } from '@/components/FloatBtn';

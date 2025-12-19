@@ -1,2 +1,31 @@
 .nodata {
+    &__wrap {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        width: fit-content;
+    }
+    &__img {
+        width: 16rem;
+        margin-bottom: 2rem;
+    }
+    &__txt {
+        text-align: center;
+    }
+    &__tit {
+        font-family: var.$font-noto;
+        font-weight: 600;
+        font-size: 1.6rem;
+        color: $gray-color-6;
+    }
+    &__sub {
+        display: block;
+        font-weight: 500;
+        font-size: 1.3rem;
+        line-height: 1.6rem;
+        letter-spacing: -0.02em;
+        color: $gray-color-5;
+        margin-top: 0.6rem;
+    }
 }

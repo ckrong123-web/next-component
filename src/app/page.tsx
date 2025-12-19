@@ -21,6 +21,8 @@ import {
     CheckboxGuide,
     ChipGuide,
     DatepickerGuide,
+    NodataGuide,
+    FloatBtnGuide,
 } from '@/guide';
 
 const listData = [
@@ -42,6 +44,8 @@ const listData = [
     { compnent: 'Stepper', guide: <StepperGuide /> },
     { compnent: 'Swiper', name: 'Slide (swiper)', guide: <SwiperGuide /> },
     { compnent: 'Tab', guide: <TabGuide /> },
+    { compnent: 'Nodata', guide: <NodataGuide /> },
+    { compnent: 'FloatBtn', guide: <FloatBtnGuide /> },
 ];
 
 export default function page() {

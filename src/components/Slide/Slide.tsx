@@ -38,7 +38,6 @@ export default function Slide({
         modules: [
             ...(nav || navOnly ? [Navigation] : []),
             ...(pagin || progress ? [Pagination] : []),
-            // ...(nav ? [Navigation] : []),
         ],
         spaceBetween: 16,
         navigation:
