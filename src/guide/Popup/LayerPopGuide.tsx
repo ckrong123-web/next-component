@@ -61,7 +61,7 @@ export default function LayerPopGuide() {
                         제어 할 수 있다.
                         <br />
                         name(string) 필수로 넘겨야 하는 값, 이 값으로 popup 내부
-                        classname이 작성됨, 기본값은 'popup'
+                        classname이 작성됨, 기본값은 &apos;popup&apos;
                         <br />
                         title(string) 추가시 title 텍스트 추가됨
                         <br />

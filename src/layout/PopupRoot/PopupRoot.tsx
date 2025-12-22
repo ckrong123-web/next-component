@@ -13,7 +13,7 @@ export default function PopupRoot() {
                 ? (document.body.style.overflow = 'hidden')
                 : (document.body.style.overflow = 'unset');
         }
-    }, [popupList]);
+    }, [popupList, dimm]);
 
     return (
         <div

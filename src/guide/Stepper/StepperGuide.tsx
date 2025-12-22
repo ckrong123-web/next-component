@@ -32,7 +32,8 @@ export default function StepperGuide() {
                         서브컴포넌트 : Stepper.Input (Props : placeholder |
                         ...rest ),
                         <br /> Stepper.Btn ( Props: count
-                        <span>( 'down' , 'up' )</span> | num )
+                        <span>( &apos;down&apos; , &apos;up&apos; )</span> | num
+                        )
                         <br />
                         <br />
                         Props max(number) 추가시 최대값 지정 가능, 기본값은 999
@@ -43,16 +44,16 @@ export default function StepperGuide() {
                         <br />
                         <br />
                         Stepper.Input Props placeholder(string) 추가시
-                        placeholder 지정 가능, 기본값은 '000'
+                        placeholder 지정 가능, 기본값은 &apos;000&apos;
                         <br />
                         이외 props는 ...rest로 input에 넘어감
                         <br />
                         <br />
-                        Stepper.Btn Props count:<span>'down'</span> = 감소 버튼,
-                        최소값일때 비활성화
+                        Stepper.Btn Props count:<span>&apos;down&apos;</span> =
+                        감소 버튼, 최소값일때 비활성화
                         <br />
-                        Stepper.Btn Props count:<span>'up'</span> = 증가 버튼,
-                        최대값일때 비활성화
+                        Stepper.Btn Props count:<span>&apos;up&apos;</span> =
+                        증가 버튼, 최대값일때 비활성화
                         <br />
                         Stepper.Btn Props num: 증가 or 감소 치 지정, 기본값은 1
                     </div>

@@ -62,7 +62,11 @@ export default function ProgressGuide() {
                         값 입력시 로딩에 적용 됨
                         <br />
                         <br />
-                        <Input type="number" onChange={thisNum} />
+                        <Input
+                            type="number"
+                            onChange={thisNum}
+                            value={myPercent}
+                        />
                     </div>
                 </div>
             </div>

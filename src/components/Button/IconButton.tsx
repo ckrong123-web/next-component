@@ -31,7 +31,7 @@ export default function IconButton({
         };
 
         window.addEventListener('scroll', settingTooltip);
-    }, [autoTooltipBottom]);
+    }, [autoTooltipBottom, tooltipLocationAuto]);
 
     return (
         <button

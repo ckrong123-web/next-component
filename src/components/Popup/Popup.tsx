@@ -52,7 +52,7 @@ export default function Popup({
         const inSnackbar = snackbarList.some((item) => item.clone === `${id}`);
 
         setOpen(inPopup || inSnackbar);
-    }, [popupList, snackbarList]);
+    }, [id, popupList, snackbarList]);
 
     useEffect(() => {}, [snackbarList]);
 

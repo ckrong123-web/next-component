@@ -26,11 +26,11 @@ export default function BadgeGuide() {
                             컴포넌트명 : Badge
                             <br /> Props: color
                             <span>
-                                ('default','black','red','blue','purple')
-                            </span>{' '}
+                                (&apos;default&apos;,&apos;black&apos;,&apos;red&apos;,&apos;blue&apos;,&apos;purple&apos;)
+                            </span>
                             | size
-                            <span>('big')</span> href | isBtn | noBorder |
-                            className | children
+                            <span>(&apos;big&apos;)</span> href | isBtn |
+                            noBorder | className | children
                         </div>
                     </div>
                     <span className="guide__boxName">big</span>

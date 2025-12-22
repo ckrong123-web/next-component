@@ -13,6 +13,7 @@ interface StepperContextProps {
     value: string;
     setValue: React.Dispatch<React.SetStateAction<string>>;
     disable?: boolean;
+    max?: number;
 }
 
 const StepperContext = createContext<StepperContextProps | undefined>(
@@ -55,7 +56,7 @@ export default function Stepper({
         } else if (Number(value) > max) {
             setValue(`${max}`);
         }
-    }, [value]);
+    }, [value, max]);
 
     const isFocusing = () => {
         !disable && setIsFocus(true);
@@ -66,7 +67,7 @@ export default function Stepper({
     };
 
     return (
-        <StepperContext.Provider value={{ value, setValue, disable }}>
+        <StepperContext.Provider value={{ value, setValue, disable, max }}>
             <div
                 className={cn('stepper', className)}
                 onFocus={isFocusing}

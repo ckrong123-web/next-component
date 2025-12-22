@@ -56,11 +56,11 @@ export default function Input({
                         !readOnly && setIsFocus(false);
                     }}
                     type={number ? 'number' : 'text'}
-                    {...rest}
                     value={value}
                     onChange={(e) => {
                         setValue(e.target.value);
                     }}
+                    {...rest}
                 />
                 {value && hasDelete && (
                     <button

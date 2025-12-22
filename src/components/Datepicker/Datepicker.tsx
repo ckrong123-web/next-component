@@ -40,7 +40,7 @@ export default function Datepicker({
                 <DatePicker
                     locale="ko"
                     selected={startDate}
-                    onChange={(date) => setStartDate(date)}
+                    onChange={(date: Date | null) => setStartDate(date)}
                     dateFormat={dateFormat}
                     placeholderText={placeholder}
                     disabled={disabled}

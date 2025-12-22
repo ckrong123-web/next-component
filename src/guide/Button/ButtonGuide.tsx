@@ -49,8 +49,11 @@ export default function ButtonGuide() {
                         <div className="guide__desc">
                             컴포넌트명 : Button <br />
                             Props : children | href | type
-                            <span>( 'blue' , 'gray' , 'darkGray' )</span> |
-                            disable | onClickEvt <br />
+                            <span>
+                                ( &apos;blue&apos; , &apos;gray&apos; ,
+                                &apos;darkGray&apos; )
+                            </span>{' '}
+                            | disable | onClickEvt <br />
                             Props href( string ) 추가시 링크형( a )으로 생성
                             <br />
                             Props disable 추가시 disabled 상태로 생성

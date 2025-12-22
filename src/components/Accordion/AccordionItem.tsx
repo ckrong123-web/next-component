@@ -29,13 +29,13 @@ export default function AccordionItem({
 
     useEffect(() => {
         !multi && isOpen && setActiveNum(index);
-    }, []);
+    }, [index, isOpen, multi, setActiveNum, activeNum]);
 
     useEffect(() => {
         if (!multi) {
             activeNum === index ? setOpen(true) : setOpen(false);
         }
-    }, [activeNum]);
+    }, [activeNum, index, multi, setOpen, open]);
 
     return (
         <li className="accordion__item">

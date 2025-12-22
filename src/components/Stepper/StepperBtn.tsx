@@ -9,7 +9,7 @@ interface StepperBtnProps {
 }
 
 export default function StepperBtn({ count, num = 1 }: StepperBtnProps) {
-    const { value, setValue, disable } = useStepper();
+    const { value, setValue, disable, max } = useStepper();
     const [isDisable, setIsDisalbe] = useState(disable);
 
     const handleClickBtn = () => {
@@ -40,7 +40,7 @@ export default function StepperBtn({ count, num = 1 }: StepperBtnProps) {
         if (value === '0' && count === 'down') {
             // console.log('0이다');
             setIsDisalbe(true);
-        } else if (value === '999' && count === 'up') {
+        } else if (max && Number(value) === max && count === 'up') {
             // console.log('max다');
             setIsDisalbe(true);
         } else {
