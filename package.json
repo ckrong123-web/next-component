@@ -6,7 +6,7 @@
         "dev": "next dev -p 3002",
         "build": "next build",
         "preview": "next build && npx serve@latest out -p 3003",
-        "deploy": "cross-env GITHUB_PAGES=true next build && gh-pages -d out",
+        "deploy": "cross-env GITHUB_PAGES=true next build && gh-pages -d out -t",
         "lint": "next lint"
     },
     "dependencies": {
