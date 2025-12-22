@@ -1,0 +1,21 @@
+<svg
+  xmlns="http://www.w3.org/2000/svg"
+  fill="none"
+  viewBox="0 0 12 12"
+  class="ico ico-home"
+>
+  <path
+    d="M2 5.25
+       L6 2
+       L10 5.25
+       V9.5
+       C10 9.914 9.664 10.25 9.25 10.25
+       H2.75
+       C2.336 10.25 2 9.914 2 9.5
+       Z"
+    stroke="currentColor"
+    stroke-width="0.75"
+    stroke-linejoin="round"
+    stroke-linecap="round"
+  />
+</svg>
