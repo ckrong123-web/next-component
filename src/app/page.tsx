@@ -1,7 +1,8 @@
 'use client';
 
-import React from 'react';
+import React, { useState } from 'react';
 import Link from 'next/link';
+import cn from 'classnames';
 import {
     PopupGuide,
     InputGuide,
@@ -48,22 +49,25 @@ const listData = [
     { compnent: 'FloatBtn', guide: <FloatBtnGuide /> },
 ];
 
-export default function page() {
+import { ArrowRightIcon, ArrowLeftIcon } from '@/icon';
+
+export default function Page() {
+    const [open, setOpen] = useState(false);
     return (
         <>
             <div>
-                <div
-                    style={{
-                        padding: '30px 15px',
-                        position: 'fixed',
-                        top: '0',
-                        display: 'flex',
-                        flexDirection: 'column',
-                        height: 'fit-content',
-                        width: '170px',
-                        gap: '10px',
-                    }}
-                >
+                <div className={cn('guide-list', open && 'guide-list--open')}>
+                    <button
+                        className="guide-list__btn"
+                        onClick={() => setOpen((prev) => !prev)}
+                    >
+                        {open ? (
+                            <ArrowLeftIcon color="#fff" />
+                        ) : (
+                            <ArrowRightIcon color="#fff" />
+                        )}
+                        <span className="blind">{open ? '닫기' : '열기'}</span>
+                    </button>
                     {listData.map((item, num) => {
                         return (
                             <Link
@@ -75,13 +79,7 @@ export default function page() {
                         );
                     })}
                 </div>
-                <div
-                    style={{
-                        padding: '30px 20px',
-                        marginLeft: '170px',
-                        borderLeft: '1px solid rgba(191, 214, 230, 0.5)',
-                    }}
-                >
+                <div className={cn('guide-body', open && 'guide-body--open')}>
                     {listData.map((item, num) => {
                         return (
                             <div key={num} className="guide">

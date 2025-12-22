@@ -4,6 +4,7 @@
         justify-content: flex-start;
         align-items: center;
         gap: 0.6rem;
+        overflow: auto;
     }
     &__btn {
         padding: 0.7rem 2.4rem;
@@ -52,6 +53,7 @@
     &--round {
         .tab__btnArea {
             margin-bottom: 1rem;
+            overflow: auto;
         }
         .tab__btnList {
             border: 1px solid $gray-color-2;

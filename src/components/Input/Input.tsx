@@ -45,7 +45,6 @@ export default function Input({
             >
                 <input
                     className="input__cont"
-                    defaultValue={defaultValue}
                     placeholder={placeholder}
                     disabled={disabled}
                     readOnly={readOnly}

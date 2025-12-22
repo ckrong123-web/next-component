@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useId } from 'react';
 import Select from 'react-select';
 
 interface SelectOption {
@@ -9,6 +9,7 @@ interface SelectProps {
     options: SelectOption[];
     isSearch?: boolean;
     placeholder?: string;
+    id?: string;
     [key: string]: any;
 }
 
@@ -16,8 +17,10 @@ export default function SelectBox({
     options,
     isSearch = false,
     placeholder = '값을 선택해주세요.',
+    id,
     ...rest
 }: SelectProps) {
+    const makeId = useId();
     return (
         <>
             <div className="selectbox">
@@ -31,6 +34,7 @@ export default function SelectBox({
                     components={{
                         IndicatorSeparator: null,
                     }}
+                    id={id ? id : makeId}
                     {...rest}
                 />
             </div>

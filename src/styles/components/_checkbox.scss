@@ -26,7 +26,8 @@
                 left: 50%;
                 transform: translate(-50%, -50%);
                 background-color: $white-color-1;
-                mask: url(/img/icon/checkicon.svg) center/contain no-repeat;
+                mask: url(#{$base-path}/img/icon/checkicon.svg) center/contain
+                    no-repeat;
             }
         }
         &:disabled {

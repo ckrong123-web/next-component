@@ -108,6 +108,9 @@ html,
 body {
     font-size: 62.5%;
     height: 100%;
+    @media (max-width: 500px) {
+        font-size: 2.4vw;
+    }
 }
 
 body {

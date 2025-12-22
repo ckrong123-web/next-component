@@ -46,7 +46,7 @@ export default function StepperBtn({ count, num = 1 }: StepperBtnProps) {
         } else {
             setIsDisalbe(false);
         }
-    }, [value, count]);
+    }, [value, count, max]);
 
     useEffect(() => {
         disable && setIsDisalbe(true);

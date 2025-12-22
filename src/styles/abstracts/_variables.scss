@@ -7,10 +7,8 @@ $screen-md: 768px;
 $screen-lg: 1024px;
 
 // - font family
-$font-spoqa: 'SpoqaHanSansNeo';
-$font-ggothic: 'HGGGothicssi';
-$font-noto: 'NotoSansKR';
-$font-roboto: 'Roboto';
+$font-noto: var(--font-noto-sans), sans-serif;
+$font-roboto: var(--font-roboto), sans-serif;
 
 // - font weight
 $font-weight-thin: 100;

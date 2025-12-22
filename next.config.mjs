@@ -12,7 +12,7 @@ const isGitHubPages = process.env.GITHUB_PAGES === 'true';
 const nextConfig = {
     output: 'export', 
     basePath: isGitHubPages ? '/next-component' : '',
-    assetPrefix: isGitHubPages ? '/next-component' : '',
+    assetPrefix: isGitHubPages ? '/next-component/' : '',
     reactStrictMode: false,
     images: {
         unoptimized: true,
@@ -23,6 +23,7 @@ const nextConfig = {
         ],
         sourceMap: true,
         prependData: `
+                  $base-path: '${isGitHubPages ? '/next-component' : ''}';
                   @use "@/styles/abstracts/_variables.scss" as var;
                   @use "@/styles/abstracts/_mixins.scss" as mix;
                   @use "@/styles/abstracts/_functions.scss" as func;

@@ -71,14 +71,16 @@
         &__navigation-icon--next {
             left: 0.4rem;
             &::after {
-                mask: url(/img/icon/arrowrighticon.svg) center/contain no-repeat;
+                mask: url(#{$base-path}/img/icon/arrowrighticon.svg)
+                    center/contain no-repeat;
             }
         }
         &__navigation-icon--previous {
             left: 0.4rem;
             &::after {
                 right: 0.2rem;
-                mask: url(/img/icon/arrowlefticon.svg) center/contain no-repeat;
+                mask: url(#{$base-path}/img/icon/arrowlefticon.svg)
+                    center/contain no-repeat;
             }
         }
         &__day-name,

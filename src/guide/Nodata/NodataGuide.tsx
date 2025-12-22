@@ -13,6 +13,7 @@ export default function NodataGuide() {
                             style={{
                                 display: 'flex',
                                 gap: '4rem',
+                                flexWrap: 'wrap',
                             }}
                         >
                             <Nodata />
