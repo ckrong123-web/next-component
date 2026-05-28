@@ -5,7 +5,6 @@ import { Swiper, SwiperSlide } from 'swiper/react';
 import type { SwiperOptions } from 'swiper/types';
 
 import { Navigation, Pagination } from 'swiper/modules';
-import 'swiper/css';
 
 import { SlideItem, SlideItemProps } from './SlideItem';
 

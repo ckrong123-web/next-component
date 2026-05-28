@@ -24,6 +24,8 @@ import {
     DatepickerGuide,
     NodataGuide,
     FloatBtnGuide,
+    CardGuide,
+    PaginationGuide,
 } from '@/guide';
 
 const listData = [
@@ -31,12 +33,14 @@ const listData = [
     { compnent: 'Badge', guide: <BadgeGuide /> },
     { compnent: 'Breadcrumb', guide: <BreadcrumbGuide /> },
     { compnent: 'Button', guide: <ButtonGuide /> },
+    { compnent: 'Card', guide: <CardGuide /> },
     { compnent: 'Checkbox', guide: <CheckboxGuide /> },
     { compnent: 'Chip', guide: <ChipGuide /> },
     { compnent: 'Datepicker', guide: <DatepickerGuide /> },
     { compnent: 'DigitalWallet', guide: <DigitalWalletGuide /> },
     { compnent: 'Icon', guide: <IconGuide /> },
     { compnent: 'Input', guide: <InputGuide /> },
+    { compnent: 'Pagination', guide: <PaginationGuide /> },
     { compnent: 'Popup', guide: <PopupGuide /> },
     { compnent: 'Progress', guide: <ProgressGuide /> },
     { compnent: 'Radio', guide: <RadioGuide /> },

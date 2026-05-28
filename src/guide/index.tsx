@@ -25,3 +25,5 @@ export { ChipGuide } from '@/guide/Chip';
 export { DatepickerGuide } from '@/guide/Datepicker';
 export { NodataGuide } from '@/guide/Nodata';
 export { FloatBtnGuide } from '@/guide/FloatBtn';
+export { CardGuide } from '@/guide/Card';
+export { PaginationGuide } from '@/guide/Pagination';

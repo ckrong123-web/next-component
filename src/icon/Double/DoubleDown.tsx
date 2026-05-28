@@ -10,7 +10,7 @@ interface IconProps {
 
 export default function DoubleDown({
     blindTxt,
-    color = '#333',
+    color = 'inherit',
     className,
 }: IconProps) {
     return (

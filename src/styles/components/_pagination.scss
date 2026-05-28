@@ -1,0 +1,20 @@
+.pagin {
+    border: 1px solid red;
+    &__wrap {
+        display: flex;
+        // gap: 0.2rem;
+    }
+    &__list {
+        display: inline-flex;
+    }
+    &__btn {
+        width: 2.2rem;
+        height: 2.2rem;
+        padding: 0.2rem;
+        color: $gray-color-5;
+        &--disable {
+            opacity: 0.4;
+            pointer-events: none;
+        }
+    }
+}

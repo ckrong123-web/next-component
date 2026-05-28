@@ -13,6 +13,7 @@ interface InputProps {
     isSearch?: boolean;
     hasDelete?: boolean;
     className?: string;
+    descTxt?: string;
     [key: string]: any;
 }
 
@@ -26,6 +27,7 @@ export default function Input({
     isSearch,
     hasDelete = true,
     className,
+    descTxt,
     ...rest
 }: InputProps) {
     const [isFocus, setIsFocus] = useState(false);
@@ -59,9 +61,10 @@ export default function Input({
                     onChange={(e) => {
                         setValue(e.target.value);
                     }}
+                    onWheel={number ? (e) => e.currentTarget.blur() : undefined}
                     {...rest}
                 />
-                {value && hasDelete && (
+                {value && hasDelete && !disabled && !readOnly && (
                     <button
                         className="input__btn"
                         onClick={() => {
@@ -79,6 +82,11 @@ export default function Input({
                     </button>
                 )}
             </div>
+            {descTxt && (
+                <span className="input__errorMessage">
+                    This is an error message
+                </span>
+            )}
             {error && (
                 <span className="input__errorMessage">
                     This is an error message

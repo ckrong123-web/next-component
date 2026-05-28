@@ -85,7 +85,6 @@ video {
     font: inherit;
     vertical-align: baseline;
     box-sizing: border-box;
-    color: inherit;
 }
 
 *,
@@ -122,7 +121,7 @@ body {
     line-height: 1.2;
     letter-spacing: -0.05em;
     background: var.$color-white;
-    color: #212529;
+    color: #333;
 
     &::-webkit-scrollbar {
         width: 0.2rem;

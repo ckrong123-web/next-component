@@ -10,6 +10,8 @@ export { default as CheckIcon } from './Check/Check';
 export { default as CopyIcon } from './Copy/Copy';
 export { default as DeleteIcon } from './Delete/Delete';
 export { default as DoubleDownIcon } from './Double/DoubleDown';
+export { default as DoubleLeftIcon } from './Double/DoubleLeft';
+export { default as DoubleRightIcon } from './Double/DoubleRight';
 export { default as DoubleUpIcon } from './Double/DoubleUp';
 export { default as HomeIcon } from './Home/Home';
 export { default as LinkIcon } from './Link/Link';

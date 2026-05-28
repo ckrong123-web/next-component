@@ -127,12 +127,19 @@ $guideColor--desc: #f0f0f0;
         height: 7rem;
         justify-content: center;
         align-items: center;
-        background-color: #0260eb;
+        background-color: $blue-point-1;
         border-radius: 0 0.8rem 0.8rem 0;
         .icon {
             height: fit-content;
         }
     }
+
+    @media (min-width: 801px) {
+        > a:hover {
+            color: $blue-point-1;
+        }
+    }
+
     @media (max-width: 800px) {
         left: -17rem;
         transition: 0.2s ease;
