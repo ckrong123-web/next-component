@@ -35,23 +35,23 @@ export default function FloatBtnGuide() {
                                 </FloatBtn.Item>
                             </FloatBtn>
                         </div>
-                        <div className="guide__desc">
-                            컴포넌트명 : FloatBtn
-                            <br />
-                            Props : children | ...rest
-                            <br />
-                            서브컴포넌트 : FloatBtn.Item (Props : href | icon |
-                            children)
-                            <br />
-                            FloatBtn.Item Props href ( string ) 추가시 링크형( a
-                            )으로 생성
-                            <br />
-                            FloatBtn.Item Props icon 필수로 추가해야 하는 값,
-                            버튼 안에 넣을 아이콘
-                            <br />
-                            FloatBtn.Item Props children 필수로 추가해야 하는
-                            값, 버튼의 텍스트 영역이다
-                        </div>
+                    </div>
+                    <div className="guide__desc">
+                        컴포넌트명 : FloatBtn
+                        <br />
+                        Props : children | ...rest
+                        <br />
+                        서브컴포넌트 : FloatBtn.Item (Props : href | icon |
+                        children)
+                        <br />
+                        FloatBtn.Item Props href ( string ) 추가시 링크형( a
+                        )으로 생성
+                        <br />
+                        FloatBtn.Item Props icon 필수로 추가해야 하는 값, 버튼
+                        안에 넣을 아이콘
+                        <br />
+                        FloatBtn.Item Props children 필수로 추가해야 하는 값,
+                        버튼의 텍스트 영역이다
                     </div>
                 </div>
             </div>

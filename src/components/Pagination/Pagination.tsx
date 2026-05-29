@@ -10,7 +10,6 @@ import {
 
 interface PaginProps {
     type?: 'url' | 'btn';
-    active?: number;
     startNum?: number;
     max?: number;
     length?: number;
@@ -18,12 +17,12 @@ interface PaginProps {
 
 export default function Pagination({
     type = 'btn',
-    active,
     startNum = 1,
     max = 15,
     length = 7,
 }: PaginProps) {
     const [start, setStart] = useState(startNum);
+    const [active, setActive] = useState(startNum);
 
     return (
         <div className={cn('pagin')}>
@@ -52,13 +51,23 @@ export default function Pagination({
                         <li
                             key={num}
                             className={cn('pagin__item', {
-                                'is-active': num === active,
+                                'pagin__item--act': num === active,
                             })}
                         >
                             {type === 'url' ? (
-                                <Link href={`?page=${num}`}>{num}</Link>
+                                <Link
+                                    href={'#'}
+                                    className={cn('pagin__item-cont')}
+                                >
+                                    {num}
+                                </Link>
                             ) : (
-                                <button>{num}</button>
+                                <button
+                                    className={cn('pagin__item-cont')}
+                                    onClick={() => setActive(num)}
+                                >
+                                    {num}
+                                </button>
                             )}
                         </li>
                     ))}

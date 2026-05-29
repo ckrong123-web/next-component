@@ -1,20 +1,57 @@
 .pagin {
-    border: 1px solid red;
     &__wrap {
         display: flex;
-        // gap: 0.2rem;
+        justify-content: center;
+        align-items: center;
+        gap: 0.2rem;
     }
     &__list {
         display: inline-flex;
+        align-items: center;
+        gap: 0.7rem;
+        margin: 0 0.4rem;
+    }
+    &__item {
+        width: 2.2rem;
+        line-height: 2rem;
+        border-radius: 0.4rem;
+        transition: 0.2s ease;
+
+        &:hover {
+            color: $blue-point-1;
+        }
+
+        &--act {
+            background-color: $blue-point-1;
+            color: $white-color-1;
+
+            &:hover {
+                color: $white-color-1;
+                opacity: 0.8;
+            }
+        }
+    }
+    &__item-cont {
+        width: 100%;
+        text-align: center;
+        line-height: 2.2rem;
+        transition: 0.2s ease;
+        color: inherit;
     }
     &__btn {
         width: 2.2rem;
         height: 2.2rem;
         padding: 0.2rem;
         color: $gray-color-5;
+        transition: 0.2s ease;
+
         &--disable {
             opacity: 0.4;
             pointer-events: none;
+        }
+
+        &:hover {
+            color: $blue-color-5;
         }
     }
 }

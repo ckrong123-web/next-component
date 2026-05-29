@@ -1,0 +1,31 @@
+.switch {
+    display: inline-block;
+    &__wrap {
+        display: flex;
+        align-items: center;
+        width: 4.6rem;
+        height: 2.4rem;
+        background-color: $gray-color-1;
+        border: 0.1rem solid $gray-color-2;
+        border-radius: 3rem;
+        cursor: pointer;
+        transition: 0.3s ease;
+        padding: 0.2rem 0.3rem;
+        &--on {
+            background-color: $blue-point-1;
+            border-color: $blue-point-1;
+        }
+    }
+    &__input {
+        width: 1.8rem;
+        height: 1.8rem;
+        border-radius: 50%;
+        background-color: $gray-color-3;
+        transition: 0.3s ease;
+        cursor: pointer;
+        &:checked {
+            transform: translateX(2rem);
+            background-color: $white-color-1;
+        }
+    }
+}

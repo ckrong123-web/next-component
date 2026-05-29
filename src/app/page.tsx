@@ -26,6 +26,9 @@ import {
     FloatBtnGuide,
     CardGuide,
     PaginationGuide,
+    ChartGuide,
+    SegmentGuide,
+    SwitchGuide,
 } from '@/guide';
 
 const listData = [
@@ -34,6 +37,7 @@ const listData = [
     { compnent: 'Breadcrumb', guide: <BreadcrumbGuide /> },
     { compnent: 'Button', guide: <ButtonGuide /> },
     { compnent: 'Card', guide: <CardGuide /> },
+    { compnent: 'Chart', guide: <ChartGuide /> },
     { compnent: 'Checkbox', guide: <CheckboxGuide /> },
     { compnent: 'Chip', guide: <ChipGuide /> },
     { compnent: 'Datepicker', guide: <DatepickerGuide /> },
@@ -44,10 +48,12 @@ const listData = [
     { compnent: 'Popup', guide: <PopupGuide /> },
     { compnent: 'Progress', guide: <ProgressGuide /> },
     { compnent: 'Radio', guide: <RadioGuide /> },
+    { compnent: 'Segment', name: 'Segmented Control', guide: <SegmentGuide /> },
     { compnent: 'SelectBox', guide: <SelectBoxGuide /> },
     { compnent: 'Slider', guide: <SliderGuide /> },
     { compnent: 'Stepper', guide: <StepperGuide /> },
     { compnent: 'Swiper', name: 'Slide (swiper)', guide: <SwiperGuide /> },
+    { compnent: 'Switch', guide: <SwitchGuide /> },
     { compnent: 'Tab', guide: <TabGuide /> },
     { compnent: 'Nodata', guide: <NodataGuide /> },
     { compnent: 'FloatBtn', guide: <FloatBtnGuide /> },

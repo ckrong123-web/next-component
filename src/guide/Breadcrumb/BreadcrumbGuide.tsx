@@ -15,15 +15,16 @@ export default function BreadcrumbGuide() {
                                 기본 브레드크럼
                             </Breadcrumb.Item>
                         </Breadcrumb>
-                    </div>
-                    <div className="guide__desc">
-                        컴포넌트명 : Breadcrumb
-                        <br /> Props: children
-                        <br />
-                        서브컴포넌트 : Breadcrumb.Item (Props : href, children)
-                        <br />
-                        Accordion.Item Props href, 추가시 링크형( a )으로 생성 /
-                        기본은 span
+                        <div className="guide__desc">
+                            컴포넌트명 : Breadcrumb
+                            <br /> Props: children
+                            <br />
+                            서브컴포넌트 : Breadcrumb.Item (Props : href,
+                            children)
+                            <br />
+                            Accordion.Item Props href, 추가시 링크형( a )으로
+                            생성 / 기본은 span
+                        </div>
                     </div>
                 </div>
             </div>

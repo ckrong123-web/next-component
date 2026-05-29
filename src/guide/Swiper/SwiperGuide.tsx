@@ -28,19 +28,18 @@ export default function SwiperGuide() {
                             );
                         })}
                     </Slide>
+                </div>
 
-                    <div className="guide__desc">
-                        컴포넌트명 : Slide Props: nav | pagin | navOnly |
-                        progress | className | children | ...rest <br />
-                        Props nav (boolean / 기본 : true) true 시 네비게이션
-                        추가
-                        <br />
-                        Props pagin (boolean / 기본 : true) true 시 페이징 추가
-                        <br />
-                        Props pagin (boolean / 기본 : true) true 시 페이징 추가
-                        <br />
-                        이외 props는 ...rest로 넘어감
-                    </div>
+                <div className="guide__desc">
+                    컴포넌트명 : Slide Props: nav | pagin | navOnly | progress |
+                    className | children | ...rest <br />
+                    Props nav (boolean / 기본 : true) true 시 네비게이션 추가
+                    <br />
+                    Props pagin (boolean / 기본 : true) true 시 페이징 추가
+                    <br />
+                    Props pagin (boolean / 기본 : true) true 시 페이징 추가
+                    <br />
+                    이외 props는 ...rest로 넘어감
                 </div>
             </div>
         </div>

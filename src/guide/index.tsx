@@ -27,3 +27,6 @@ export { NodataGuide } from '@/guide/Nodata';
 export { FloatBtnGuide } from '@/guide/FloatBtn';
 export { CardGuide } from '@/guide/Card';
 export { PaginationGuide } from '@/guide/Pagination';
+export { ChartGuide } from '@/guide/Chart';
+export { SegmentGuide } from '@/guide/Segment';
+export { SwitchGuide } from '@/guide/Switch';

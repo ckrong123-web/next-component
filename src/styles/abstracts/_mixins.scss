@@ -50,14 +50,15 @@ $icon-path: '../img/icons/';
 
 @mixin scrollbars(
     $size: 0.2rem,
-    $foreground-color,
+    $foreground-color: #354146,
     $background-color: #6d8cbd
 ) {
     // For Google Chrome
     &::-webkit-scrollbar {
         width: $size;
-        border-left: 1px solid rgba(53, 65, 70, 0.045);
-        box-shadow: 0 0.7rem 1.2rem rgba(53, 65, 70, 0.03);
+        border-left: 1px solid rgba($color: $foreground-color, $alpha: 0.045);
+        box-shadow: 0 0.7rem 1.2rem
+            rgba($color: $foreground-color, $alpha: 0.03);
     }
 
     &::-webkit-scrollbar-thumb {

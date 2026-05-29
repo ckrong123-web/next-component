@@ -4,6 +4,7 @@
         display: inline-flex;
         align-items: center;
         gap: 0.4rem;
+        cursor: pointer;
     }
     &__input {
         width: 1.8rem;
@@ -13,6 +14,7 @@
         border-radius: 0.4rem;
         position: relative;
         transition: 0.2s ease;
+        cursor: pointer;
 
         &:checked {
             border-color: $blue-point-1;

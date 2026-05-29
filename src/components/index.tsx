@@ -24,3 +24,6 @@ export { Chip } from '@/components/Chip';
 export { Datepicker } from '@/components/Datepicker';
 export { Nodata } from '@/components/Nodata';
 export { FloatBtn } from '@/components/FloatBtn';
+export { Chart } from '@/components/Chart';
+export { Segment } from '@/components/Segment';
+export { Switch } from '@/components/Switch';
