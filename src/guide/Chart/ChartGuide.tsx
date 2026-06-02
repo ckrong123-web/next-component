@@ -1,9 +1,17 @@
 import React from 'react';
 import { Chart } from '@/components';
 
+const chartColors = ['#0260eb', '#6972f3', '#ff6be4', '#00c9a7'];
+
 const lineOptions = {
     chart: { toolbar: { show: false }, zoom: { enabled: false } },
-    xaxis: { categories: ['Mon', 'Tue', 'Wed', 'Thu', 'Fri', 'Sat', 'Sun'] },
+    colors: chartColors,
+    xaxis: {
+        categories: ['Mon', 'Tue', 'Wed', 'Thu', 'Fri', 'Sat', 'Sun'],
+        tooltip: { enabled: false },
+        labels: { style: { fontSize: '13px' }, offsetY: 5 },
+    },
+    yaxis: { labels: { style: { fontSize: '13px' }, padding: 7 } },
     stroke: { curve: 'straight' as const, width: 2 },
 };
 const lineSeries = [
@@ -13,8 +21,20 @@ const lineSeries = [
 
 const barOptions = {
     chart: { toolbar: { show: false } },
-    xaxis: { categories: ['Jan', 'Feb', 'Mar', 'Apr', 'May', 'Jun', 'Jul'] },
-    plotOptions: { bar: { borderRadius: 4 } },
+    colors: chartColors,
+    xaxis: {
+        categories: ['Jan', 'Feb', 'Mar', 'Apr', 'May', 'Jun', 'Jul'],
+        tooltip: { enabled: false },
+        labels: { style: { fontSize: '13px' }, offsetY: 5 },
+    },
+    yaxis: { labels: { style: { fontSize: '13px' }, padding: 7 } },
+    plotOptions: {
+        bar: {
+            borderRadius: 4,
+            borderRadiusApplication: 'end' as const,
+            columnWidth: '40%',
+        },
+    },
 };
 const barSeries = [
     { name: '매출', data: [44, 55, 57, 56, 61, 58, 63] },
@@ -24,11 +44,23 @@ const barSeries = [
 const pieSeries = [44, 55, 13, 43];
 const pieOptions = {
     labels: ['직접 유입', '검색', 'SNS', '기타'],
+    colors: chartColors,
+    dataLabels: {
+        style: { fontSize: '1.3rem' },
+        dropShadow: { enabled: false },
+    },
+    plotOptions: { pie: { dataLabels: { offset: -20 } } },
 };
 
 const donutSeries = [44, 55, 13, 43];
 const donutOptions = {
     labels: ['직접 유입', '검색', 'SNS', '기타'],
+    colors: chartColors,
+    dataLabels: {
+        style: { fontSize: '1.3rem' },
+        dropShadow: { enabled: false },
+    },
+    plotOptions: { pie: { dataLabels: { offset: -1 } } },
 };
 
 export default function ChartGuide() {
@@ -51,7 +83,8 @@ export default function ChartGuide() {
                             <br />
                             Props type( &apos;line&apos; ) 꺾은선 차트
                             <br />
-                            Props series( ApexOptions[&apos;series&apos;] ) 차트 데이터
+                            Props series( ApexOptions[&apos;series&apos;] ) 차트
+                            데이터
                             <br />
                             Props options( ApexOptions ) apexcharts 옵션 객체
                         </div>

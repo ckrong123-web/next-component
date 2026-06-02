@@ -27,13 +27,13 @@
         height: 4.4rem;
         padding: 0.7rem;
         border-radius: 50%;
-        border: 1px solid $gray-color-3;
+        border: 1px solid var.$gray-color-3;
         .ico {
             transition: 0.2s ease;
         }
         &:hover {
             .ico {
-                color: $blue-point-1 !important;
+                color: var.$blue-point-1 !important;
             }
         }
     }
@@ -61,16 +61,16 @@
         width: 1.2rem;
         height: 1.2rem;
         border-radius: 50%;
-        border: 0.3rem solid $gray-color-3;
+        border: 0.3rem solid var.$gray-color-3;
         transition: 0.2s ease;
     }
     .swiper-pagination-bullet-active {
-        border-color: $blue-point-1;
+        border-color: var.$blue-point-1;
     }
     .swiper-pagination-progressbar {
         width: 100%;
         height: 0.4rem;
-        background-color: $gray-color-3;
+        background-color: var.$gray-color-3;
         border-radius: 1rem;
         overflow: hidden;
     }
@@ -80,7 +80,7 @@
         width: 100%;
         height: 100%;
         border-radius: 1rem;
-        background-color: $blue-color-5;
+        background-color: var.$blue-color-5;
     }
 }
 

@@ -1,8 +1,8 @@
 .accordion-item {
-    border-bottom: 1px solid $gray-color-3;
+    border-bottom: 1px solid var.$gray-color-3;
     &--active {
         .accordion-item__title {
-            color: $blue-point-1;
+            color: var.$blue-point-1;
         }
     }
     &__head {
@@ -21,7 +21,7 @@
         margin-left: auto;
     }
     &__body {
-        border-top: 1px solid $blue-color-5;
+        border-top: 1px solid var.$blue-color-5;
         padding: 2.4rem 1.2rem;
         margin: 0 1.6rem;
         @include mix.noto--14();

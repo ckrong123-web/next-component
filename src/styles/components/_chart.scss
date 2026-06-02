@@ -1,0 +1,55 @@
+.apexcharts-tooltip {
+    padding: 0.7rem 1.2rem !important;
+    background: var.$white-color-1 !important;
+}
+.apexcharts-tooltip-title {
+    line-height: 2rem !important;
+    padding: 0 0 0.4rem !important;
+}
+.apexcharts-tooltip-series-group {
+    padding: 0 !important;
+    margin-left: -0.2rem !important;
+}
+.apexcharts-tooltip-text {
+    line-height: 1.2 !important;
+}
+.apexcharts-tooltip-marker {
+    margin: 0 !important;
+}
+.apexcharts-bar-series .apexcharts-series:first-child path {
+    transform: translateX(-2.4px);
+}
+.apexcharts-bar-series .apexcharts-series:last-child path {
+    transform: translateX(2.4px);
+}
+.apexcharts-legend {
+    position: relative !important;
+    top: auto !important;
+    margin-top: -0.4rem !important;
+    gap: 1.2rem !important;
+    overflow: unset !important;
+}
+.apexcharts-legend-series {
+    margin: 0 !important;
+}
+.apexcharts-legend-marker {
+    width: 0.6rem !important;
+    height: 0.6rem !important;
+    border-radius: 50% !important;
+    overflow: hidden !important;
+}
+.apexcharts-legend-text {
+    line-height: 1 !important;
+    padding: 0 !important;
+    margin-left: 0.4rem !important;
+}
+.apexcharts-theme-light {
+    height: auto !important;
+}
+.apexcharts-theme-light * {
+    font-family: var.$font-noto !important;
+}
+.apexcharts-tooltip-series-group {
+    background: var.$white-color-1 !important;
+    color: var.$gray-color-6 !important;
+}

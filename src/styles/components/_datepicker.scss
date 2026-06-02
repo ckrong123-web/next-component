@@ -11,7 +11,7 @@
     }
 
     .react-datepicker {
-        border-color: $gray-color-3;
+        border-color: var.$gray-color-3;
         border-radius: 0.8rem;
         overflow: hidden;
         &-popper {
@@ -22,8 +22,8 @@
             border-radius: 0.8rem;
         }
         &__triangle {
-            fill: $white-color-1 !important;
-            stroke: $gray-color-3 !important;
+            fill: var.$white-color-1 !important;
+            stroke: var.$gray-color-3 !important;
         }
         &__navigation {
             top: 0.3rem;
@@ -58,13 +58,13 @@
                 position: absolute;
                 top: 0.2rem;
                 left: 0.2rem;
-                background-color: $blue-color-3;
+                background-color: var.$blue-color-3;
                 transition: 0.2s ease;
             }
             &:hover {
-                background-color: $blue-color-4;
+                background-color: var.$blue-color-4;
                 &::after {
-                    background-color: $blue-point-1;
+                    background-color: var.$blue-point-1;
                 }
             }
         }
@@ -88,7 +88,7 @@
         &__time-name {
             width: 3rem;
             height: 3rem;
-            color: $gray-color-6;
+            color: var.$gray-color-6;
             font-size: 1.4rem;
             font-weight: 400;
             line-height: 3rem;
@@ -96,21 +96,21 @@
         }
         &__day-name {
             font-weight: 600;
-            color: $blue-color-3;
+            color: var.$blue-color-3;
         }
         &__day {
             transition: 0.2s ease;
             &:not([aria-disabled='true']):hover {
                 border-radius: 0.4rem;
-                background-color: $blue-color-4;
+                background-color: var.$blue-color-4;
             }
             &--keyboard-selected {
-                background-color: $blue-color-4;
-                color: $blue-point-1;
+                background-color: var.$blue-color-4;
+                color: var.$blue-point-1;
                 font-weight: 600;
                 &:not([aria-disabled='true']):hover {
-                    background-color: $blue-point-1;
-                    color: $white-color-1;
+                    background-color: var.$blue-point-1;
+                    color: var.$white-color-1;
                 }
             }
             &--outside-month {
@@ -128,12 +128,12 @@
         &__header {
             border-radius: 0.4rem 0.4rem 0 0;
             padding: 1rem 0.8rem;
-            border-color: $gray-color-3;
-            background-color: $white-color-1;
+            border-color: var.$gray-color-3;
+            background-color: var.$white-color-1;
         }
         &__current-month {
             font-weight: 500;
-            color: $gray-color-5;
+            color: var.$gray-color-5;
             font-size: 1.3rem;
             letter-spacing: -0.02em;
             line-height: 1.6;

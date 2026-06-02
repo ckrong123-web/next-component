@@ -1,13 +1,13 @@
 .selectbox {
     .selectbox-select {
         &__control {
-            border: 1px solid $gray-color-3;
+            border: 1px solid var.$gray-color-3;
             border-radius: 0.4rem;
             min-height: 3rem;
             padding: 0.35rem 0.8rem 0.45rem;
             &:hover,
             &--is-focused {
-                border-color: $blue-point-1;
+                border-color: var.$blue-point-1;
                 box-shadow: none;
             }
         }
@@ -28,26 +28,26 @@
             }
         }
         &__dropdown-indicator {
-            background-color: $gray-color-6;
+            background-color: var.$gray-color-6;
             mask: url(#{$base-path}/img/icon/arrowdownicon.svg) center/contain
                 no-repeat;
         }
         &__clear-indicator {
-            background-color: $gray-color-6;
+            background-color: var.$gray-color-6;
             mask: url(#{$base-path}/img/icon/closeicon.svg) center/contain
                 no-repeat;
             margin: 0 0.4rem;
             position: relative;
             transition: 0.15s ease;
             &:hover {
-                background-color: $red-point-1;
+                background-color: var.$red-point-1;
             }
         }
         &__value-container {
             padding: 0;
             margin: 0;
             height: 100%;
-            color: $gray-color-6;
+            color: var.$gray-color-6;
             @include mix.noto--14();
         }
         &__value-container--is-multi {
@@ -59,31 +59,31 @@
             height: 100%;
         }
         &__placeholder {
-            color: $gray-color-3;
+            color: var.$gray-color-3;
         }
         &__menu {
             box-shadow: 0 0 0.5rem 0.5rem rgba(0, 0, 0, 0.03);
         }
         &__menu-list {
             padding: 0;
-            border: 1px solid $gray-color-3;
+            border: 1px solid var.$gray-color-3;
             border-radius: 0.4rem;
         }
         &__option {
-            color: $gray-color-6;
+            color: var.$gray-color-6;
             padding: 0.45rem 0.8rem 0.55rem;
             transition: 0.15s ease;
-            color: $gray-color-6;
+            color: var.$gray-color-6;
             @include mix.noto--14();
 
             &:hover,
             &--is-focused {
-                background-color: rgba($color: $blue-color-4, $alpha: 0.4);
+                background-color: rgba($color: var.$blue-color-4, $alpha: 0.4);
             }
             &--is-selected,
             &--is-selected:hover {
-                background-color: $blue-point-1;
-                color: $gray-color-1;
+                background-color: var.$blue-point-1;
+                color: var.$gray-color-1;
             }
         }
         &__multi-value {
@@ -96,19 +96,19 @@
         }
         &__multi-value__label {
             padding: 0;
-            color: $gray-color-6;
+            color: var.$gray-color-6;
             @include mix.noto--14();
         }
         &__multi-value__remove {
             width: 1.6rem;
             height: 1.6rem;
             margin-left: 0.2rem;
-            background-color: $gray-color-6;
+            background-color: var.$gray-color-6;
             mask: url(#{$base-path}/img/icon/closeicon.svg) center/contain
                 no-repeat;
             transition: 0.15s ease;
             &:hover {
-                background-color: $red-point-1;
+                background-color: var.$red-point-1;
             }
             > svg {
                 display: none;
@@ -116,7 +116,7 @@
         }
         &__menu-notice {
             padding: 1.8rem 1.2rem;
-            color: $gray-color-4;
+            color: var.$gray-color-4;
             @include mix.noto--12();
         }
     }

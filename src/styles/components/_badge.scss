@@ -2,34 +2,34 @@
     display: inline-block;
     border-radius: 0.4rem;
     padding: 0.4rem 0.8rem;
-    border: 1px solid $gray-color-3;
+    border: 1px solid var.$gray-color-3;
     font-weight: 500;
     font-size: 1.2rem;
     line-height: 1.4rem;
     letter-spacing: -0.02em;
-    background-color: $white-color-1;
-    color: $gray-color-4 !important;
+    background-color: var.$white-color-1;
+    color: var.$gray-color-4 !important;
     box-sizing: border-box;
 
     &--black {
-        border-color: $gray-color-4;
-        background-color: $gray-color-3;
-        color: $gray-color-6 !important;
+        border-color: var.$gray-color-4;
+        background-color: var.$gray-color-3;
+        color: var.$gray-color-6 !important;
     }
     &--red {
-        border-color: $red-normal-1;
-        background-color: $red-light-1;
-        color: $red-point-1 !important;
+        border-color: var.$red-normal-1;
+        background-color: var.$red-light-1;
+        color: var.$red-point-1 !important;
     }
     &--blue {
-        border-color: $blue-color-4;
-        background-color: $blue-color-1;
-        color: $blue-point-1 !important;
+        border-color: var.$blue-color-4;
+        background-color: var.$blue-color-1;
+        color: var.$blue-point-1 !important;
     }
     &--purple {
-        border-color: $purple-normal-1;
-        background-color: $purple-light-1;
-        color: $purple-point-1 !important;
+        border-color: var.$purple-normal-1;
+        background-color: var.$purple-light-1;
+        color: var.$purple-point-1 !important;
     }
 
     &--big {
@@ -41,7 +41,7 @@
         border: 0px;
 
         &.badge--default {
-            background-color: $gray-color-2;
+            background-color: var.$gray-color-2;
         }
     }
 }

@@ -3,21 +3,21 @@
         display: flex;
         align-items: center;
         gap: 0.2rem;
-        border: 1px solid $gray-color-3;
+        border: 1px solid var.$gray-color-3;
         border-radius: 0.4rem;
         padding: 0.35rem 1rem 0.45rem;
-        background-color: $white-color-1;
+        background-color: var.$white-color-1;
         transition: 0.3s ease border-color;
 
         &.input--disabled,
         &.input--readOnly {
-            background-color: $blue-color-1;
+            background-color: var.$blue-color-1;
         }
         &.input--focus {
-            border-color: $blue-point-1;
+            border-color: var.$blue-point-1;
         }
         &.input--error {
-            border-color: $red-point-1;
+            border-color: var.$red-point-1;
         }
         &.input--number .input__cont {
             text-align: right;
@@ -26,17 +26,17 @@
     &__cont {
         width: 100%;
         text-overflow: ellipsis;
-        color: $gray-color-6;
+        color: var.$gray-color-6;
         @include mix.noto--14();
 
         &::placeholder {
-            color: $gray-color-3;
+            color: var.$gray-color-3;
         }
         &:disabled,
         &:read-only {
-            color: $gray-color-4;
+            color: var.$gray-color-4;
             &::placeholder {
-                color: $gray-color-3;
+                color: var.$gray-color-3;
             }
         }
         &::-webkit-outer-spin-button,
@@ -49,7 +49,7 @@
         display: block;
         margin-top: 0.8rem;
         @include mix.noto--10();
-        color: $red-point-1;
+        color: var.$red-point-1;
     }
     &__btn {
         width: 1.6rem;

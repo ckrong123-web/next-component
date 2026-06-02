@@ -117,10 +117,10 @@ body {
     font-family:
         var.$font-noto, var.$font-roboto, 'malgun', 'Apple SD Gothic Neo',
         '돋움', Dotum;
-    font-weight: var.$font-weight-regular;
+    font-weight: 400;
     line-height: 1.2;
     letter-spacing: -0.05em;
-    background: var.$color-white;
+    background: var.$white-color-1;
     color: #333;
 
     &::-webkit-scrollbar {

@@ -28,13 +28,13 @@
         width: 4.4rem;
         height: 4.4rem;
         border-radius: 50%;
-        background-color: $blue-color-2;
+        background-color: var.$blue-color-2;
         padding: 0.6rem;
         transform: rotate(225deg);
         transition: 0.3s ease;
 
         .icon svg {
-            color: $white-color-1 !important;
+            color: var.$white-color-1 !important;
         }
 
         &--open {
@@ -42,7 +42,7 @@
         }
 
         &:hover {
-            background-color: $blue-color-3;
+            background-color: var.$blue-color-3;
         }
     }
 
@@ -58,11 +58,11 @@
     width: 4.4rem;
     height: 4.4rem;
     border-radius: 50%;
-    border: 1px solid $gray-color-3;
+    border: 1px solid var.$gray-color-3;
     padding: 0.7rem;
     opacity: 0.6;
     transition: 0.2s ease;
-    background-color: $white-color-1;
+    background-color: var.$white-color-1;
     &__wrap {
         position: relative;
     }
@@ -76,10 +76,10 @@
         transition: 0.3s ease;
         font-weight: 400;
         font-size: 1.3rem;
-        color: $gray-color-5;
+        color: var.$gray-color-5;
     }
     svg {
-        color: $gray-color-6 !important;
+        color: var.$gray-color-6 !important;
     }
 
     &:hover {

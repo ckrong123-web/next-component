@@ -9,7 +9,7 @@
     &__input {
         width: 1.8rem;
         height: 1.8rem;
-        border: 1px solid $gray-color-3;
+        border: 1px solid var.$gray-color-3;
         box-sizing: border-box;
         border-radius: 0.4rem;
         position: relative;
@@ -17,8 +17,8 @@
         cursor: pointer;
 
         &:checked {
-            border-color: $blue-point-1;
-            background-color: $blue-point-1;
+            border-color: var.$blue-point-1;
+            background-color: var.$blue-point-1;
             &::after {
                 content: '';
                 width: calc(100% - 0.3rem);
@@ -27,16 +27,16 @@
                 top: 50%;
                 left: 50%;
                 transform: translate(-50%, -50%);
-                background-color: $white-color-1;
+                background-color: var.$white-color-1;
                 mask: url(#{$base-path}/img/icon/checkicon.svg) center/contain
                     no-repeat;
             }
         }
         &:disabled {
-            background-color: $gray-color-3;
+            background-color: var.$gray-color-3;
             &:checked {
-                background-color: $gray-color-4;
-                border-color: $gray-color-4;
+                background-color: var.$gray-color-4;
+                border-color: var.$gray-color-4;
             }
         }
     }

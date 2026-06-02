@@ -36,7 +36,7 @@
         padding: 2.4rem;
         display: flex;
         flex-direction: column;
-        border: 1px solid $gray-color-2;
+        border: 1px solid var.$gray-color-2;
         box-shadow: 0 0.7rem 1.2rem rgba(53, 65, 70, 0.2);
     }
 
@@ -120,7 +120,7 @@
         margin-top: 0;
     }
     &__wrap {
-        background-color: rgba($color: $gray-color-6, $alpha: 0.9);
+        background-color: rgba($color: var.$gray-color-6, $alpha: 0.9);
         box-shadow: 0 0.7rem 1.2rem rgba(53, 65, 70, 0.2);
         padding: 0.6rem 1.2rem;
         border-radius: 0.8rem;
