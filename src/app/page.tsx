@@ -37,7 +37,7 @@ const listData = [
     { compnent: 'Breadcrumb', guide: <BreadcrumbGuide /> },
     { compnent: 'Button', guide: <ButtonGuide /> },
     { compnent: 'Card', guide: <CardGuide /> },
-    { compnent: 'Chart', guide: <ChartGuide /> },
+    // { compnent: 'Chart', guide: <ChartGuide /> },
     { compnent: 'Checkbox', guide: <CheckboxGuide /> },
     { compnent: 'Chip', guide: <ChipGuide /> },
     { compnent: 'Datepicker', guide: <DatepickerGuide /> },
