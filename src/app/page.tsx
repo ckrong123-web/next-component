@@ -78,16 +78,18 @@ export default function Page() {
                         )}
                         <span className="blind">{open ? '닫기' : '열기'}</span>
                     </button>
-                    {listData.map((item, num) => {
-                        return (
-                            <Link
-                                href={`/${item.compnent.toLowerCase()}`}
-                                key={num}
-                            >
-                                {item.name ? item.name : item.compnent}
-                            </Link>
-                        );
-                    })}
+                    <div className={cn('guide-list__wrap')}>
+                        {listData.map((item, num) => {
+                            return (
+                                <Link
+                                    href={`/${item.compnent.toLowerCase()}`}
+                                    key={num}
+                                >
+                                    {item.name ? item.name : item.compnent}
+                                </Link>
+                            );
+                        })}
+                    </div>
                 </div>
                 <div className={cn('guide-body', open && 'guide-body--open')}>
                     {listData.map((item, num) => {
